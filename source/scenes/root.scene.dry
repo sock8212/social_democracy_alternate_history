@@ -126,10 +126,11 @@ Q.dnvp_leader = "Hergt";
 Q.nsfb_leader = "Graefe";
 
 Q.spd_ideology = "Right";
-Q.svd_ideology = "Right";
-Q.rdp_ideology = "Centre";
+Q.svd_ideology = "Centre";
+Q.rdp_ideology = "Right";
 Q.lv_ideology = "Centre";
 Q.dnvp_ideology = "Left";
+Q.nsfb_ideology = "Pragmatic";
 
 
 Q.kpd_leader = "Thälmann";
