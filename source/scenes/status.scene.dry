@@ -31,7 +31,7 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-President: [? if president_party == "LV": <span style="color: #d9c640;">**[+ president +]**</span> </span> (<span style="color: #d9c640;">**[+ president_party +]**</span>) ?]
+President: [? if president_party == "LVP": <span style="color: #d9c640;">**[+ president +]**</span> </span> (<span style="color: #d9c640;">**[+ president_party +]**</span>) ?]
 
 Chancellor: [? if chancellor_party == "Z": <span style="color: #000;">**[+ chancellor +]**</span> (<span style="color: #000;">**[+ chancellor_party +]**</span>) ?] 
 
@@ -81,7 +81,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 <span class="tooltip-text" title="Radical Democratic Party" style="color: #c66cda;">**RDP**</span>: [+ rdp_relation : relationships +]
 
-<span class="tooltip-text" title="United Liberal Party" style="color: #d9c640;">**LV**</span>: [+ lv_relation : relationships +]
+<span class="tooltip-text" title="United Liberal Party" style="color: #d9c640;">**LVP**</span>: [+ lvp_relation : relationships +]
 
 <span class="tooltip-text" title="German National People's Party" style="color: #598dca;">**DNVP**</span>: [+ dnvp_relation : relationships +]
 
@@ -95,7 +95,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 [? if svd_ideology != 0: <span class="tooltip-text" title="Radical Democratic Party" style="color: #c66cda;">**RDP**</span>: [? if rdp_ideology = "Left": Radical Liberalism?][? if rdp_ideology = "Right": Progressive Liberalism ?] ([+ rdp_leader +])?]
 
-[? if svd_ideology != 0: <span class="tooltip-text" title="United Liberal Party" style="color: #d9c640;">**LV**</span>: [? if lv_ideology = "Left": Big-tent Liberalism?][? if lv_ideology = "Centre": Classical Liberalism ?][? if lv_ideology = "Right": National Liberalism ?] ([+ lv_leader +])?]
+[? if svd_ideology != 0: <span class="tooltip-text" title="United Liberal Party" style="color: #d9c640;">**LVP**</span>: [? if lv_ideology = "Left": Big-tent Liberalism?][? if lv_ideology = "Centre": Classical Liberalism ?][? if lv_ideology = "Right": National Liberalism ?] ([+ lv_leader +])?]
 
 [? if svd_ideology != 0: <span class="tooltip-text" title="German National People's Party" style="color: #598dca;">**DNVP**</span>: [? if dnvp_ideology = "Left": Popular Conservatism?][? if dnvp_ideology = "Centre": National Conservatism ?][? if dnvp_ideology = "Right": Authoritarian Conservatism ?] ([+ dnvp_leader +])?]
 
@@ -177,7 +177,7 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 <span style="color: #c66cda;">**RDP**</span>: [+ rdp_votes +]%
 
-<span style="color: #d9c640;">**LV**</span>: [+ lv_votes +]%
+<span style="color: #d9c640;">**LVP**</span>: [+ lvp_votes +]%
 
 <span style="color: #000;">**Z**</span>: [+ z_votes +]%
 
@@ -193,16 +193,16 @@ Support for <span class="tooltip-text" title="Nationalism, although weakened by 
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_spd_display +]%, SVD: [+ workers_svd_display +]%, RDP: [+ workers_rdp_display +]%, LV: [+ workers_lv_display +]%, Z: [+ workers_z_display +]%; DNVP: [+ workers_dnvp_display +]%, NSFB: [+ workers_nsfb_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: SPD: [+ workers_spd_display +]%, SVD: [+ workers_svd_display +]%, RDP: [+ workers_rdp_display +]%, LVP: [+ workers_lvp_display +]%, Z: [+ workers_z_display +]%; DNVP: [+ workers_dnvp_display +]%, NSFB: [+ workers_nsfb_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
 
-New Middle Class: SPD: [+ new_middle_spd_display +]%, SVD: [+ new_middle_svd_display +]%, RDP: [+ new_middle_rdp_display +]%, LV: [+ new_middle_lv_display +]%, Z: [+ new_middle_z_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSFB: [+ new_middle_nsfb_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+New Middle Class: SPD: [+ new_middle_spd_display +]%, SVD: [+ new_middle_svd_display +]%, RDP: [+ new_middle_rdp_display +]%, LVP: [+ new_middle_lvp_display +]%, Z: [+ new_middle_z_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSFB: [+ new_middle_nsfb_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
 
-Old Middle Class: SPD: [+ old_middle_spd_display +]%, SVD: [+ old_middle_svd_display +]%, RDP: [+ old_middle_rdp_display +]%, LV: [+ old_middle_lv_display +]%, Z: [+ old_middle_z_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSFB: [+ old_middle_nsfb_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: SPD: [+ old_middle_spd_display +]%, SVD: [+ old_middle_svd_display +]%, RDP: [+ old_middle_rdp_display +]%, LVP: [+ old_middle_lvp_display +]%, Z: [+ old_middle_z_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSFB: [+ old_middle_nsfb_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
-Rural: SPD: [+ rural_spd_display +]%, SVD: [+ rural_svd_display +]%, RDP: [+ rural_rdp_display +]%, LV: [+ rural_lv_display +]%: [+ rural_ddp_display +]%, Z: [+ rural_z_display +]%; DNVP: [+ rural_dnvp_display +]%, NSFB: [+ rural_nsfb_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: SPD: [+ rural_spd_display +]%, SVD: [+ rural_svd_display +]%, RDP: [+ rural_rdp_display +]%, LVP: [+ rural_lvp_display +]%: [+ rural_ddp_display +]%, Z: [+ rural_z_display +]%; DNVP: [+ rural_dnvp_display +]%, NSFB: [+ rural_nsfb_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
 
-Unemployed: SPD: [+ unemployed_spd_display +]%, SVD: [+ unemployed_svd_display +]%, RDP: [+ unemployed_rdp_display +]%, LV: [+ unemployed_lv_display +]%, Z: [+ unemployed_z_display +]%; DNVP: [+ unemployed_dnvp_display +]%, NSFB: [+ unemployed_nsfb_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: SPD: [+ unemployed_spd_display +]%, SVD: [+ unemployed_svd_display +]%, RDP: [+ unemployed_rdp_display +]%, LVP: [+ unemployed_lvp_display +]%, Z: [+ unemployed_z_display +]%; DNVP: [+ unemployed_dnvp_display +]%, NSFB: [+ unemployed_nsfb_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
 
-Catholics: SPD: [+ catholics_spd_display +]%, SVD: [+ catholics_svd_display +]%, RDP: [+ catholics_rdp_display +]%, LV: [+ catholics_LV_display +]%, Z: [+ catholics_z_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSFB: [+ catholics_nsfb_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Catholics: SPD: [+ catholics_spd_display +]%, SVD: [+ catholics_svd_display +]%, RDP: [+ catholics_rdp_display +]%, LVP: [+ catholics_LV_display +]%, Z: [+ catholics_z_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSFB: [+ catholics_nsfb_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
 

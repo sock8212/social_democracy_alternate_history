@@ -112,8 +112,8 @@ Q.NSDAP_relation = 0;
 
 Q.spd_relation = 32;
 Q.svd_relation = 48;
-Q.rdp_relation = 40;
-Q.lv_relation = 63;
+Q.rdp_relation = 38;
+Q.lvp_relation = 63;
 Q.dnvp_relation = 39;
 Q.nsfb_relation = 10;
 
@@ -191,7 +191,7 @@ Q.nationalism = 44;
 // socialism vs capitalism
 Q.socialism = 43;
 // pro-republic vs anti-republic
-Q.pro_republic = 67;
+Q.pro_republic = 68;
 
 Q.emergency_rule = 0;
 
@@ -249,17 +249,17 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'svd', 'rdp', 'lv', 'z', 'dnvp', 'nsfb', 'other'];
+Q.parties = ['spd', 'svd', 'rdp', 'lvp', 'z', 'dnvp', 'nsfb', 'other'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 52; 
-Q.workers_svd = 26;
+Q.workers_spd = 51; 
+Q.workers_svd = 27;
 Q.workers_rdp = 4;
-Q.workers_lv = 2;
+Q.workers_lvp = 2;
 Q.workers_z = 6;
 Q.workers_dnvp = 6;
 Q.workers_nsfb = 2;
@@ -268,16 +268,16 @@ Q.workers_other = 2;
 Q.old_middle_spd = 3;
 Q.old_middle_svd = 1;
 Q.old_middle_rdp = 5;
-Q.old_middle_lv = 40;
+Q.old_middle_lvp = 41;
 Q.old_middle_z = 10;
 Q.old_middle_dnvp = 31;
 Q.old_middle_nsfb = 4;
-Q.old_middle_other = 6;
+Q.old_middle_other = 5;
 
 Q.new_middle_spd = 8;
 Q.new_middle_svd = 5;
 Q.new_middle_rdp = 24;
-Q.new_middle_lv = 35;
+Q.new_middle_lvp = 35;
 Q.new_middle_z = 5;
 Q.new_middle_dnvp = 15;
 Q.new_middle_nsfb = 4;
@@ -286,7 +286,7 @@ Q.new_middle_other = 2;
 Q.rural_spd = 19;
 Q.rural_svd = 13;
 Q.rural_rdp = 2;
-Q.rural_lv = 17;
+Q.rural_lvp = 17;
 Q.rural_z = 10;
 Q.rural_dnvp = 30;
 Q.rural_nsfb = 5;
@@ -295,7 +295,7 @@ Q.rural_other = 4;
 Q.unemployed_spd = 55;
 Q.unemployed_svd = 20;
 Q.unemployed_rdp = 2;
-Q.unemployed_lv = 1;
+Q.unemployed_lvp = 1;
 Q.unemployed_z = 4;
 Q.unemployed_dnvp = 5;
 Q.unemployed_nsfb = 10;
@@ -304,7 +304,7 @@ Q.unemployed_other = 4;
 Q.catholics_spd = 10;
 Q.catholics_svd = 13;
 Q.catholics_rdp = 1;
-Q.catholics_lv = 6;
+Q.catholics_lvp = 6;
 Q.catholics_z = 52;
 Q.catholics_dnvp = 15;
 Q.catholics_nsfb = 1;
@@ -320,7 +320,7 @@ Q.catholics_other = 2;
 Q.spd_r = 24.2;
 Q.svd_r = 18.3;
 Q.rdp_r = 4.8;
-Q.lv_r = 15.1;
+Q.lvp_r = 15.1;
 Q.z_r = 18.4;
 Q.dnvp_r = 13.5;
 Q.nsfb_r = 1.5;
@@ -330,7 +330,7 @@ Q.other_r = 4.2;
 Q.old_spd_r = 24.2;
 Q.old_svd_r = 18.3;
 Q.old_rdp_r = 4.8;
-Q.old_lv_r = 15.1;
+Q.old_lvp_r = 15.1;
 Q.old_z_r = 18.4;
 Q.old_dnvp_r = 13.5;
 Q.old_nsfb_r = 4.2;
@@ -353,14 +353,14 @@ Q.economic_records = [];
 
 // State of the government
 Q.president = "Gessler";
-Q.president_party = 'LV';
+Q.president_party = 'LVP';
 // starting chancellor: Wilhelm Marx
 Q.chancellor = "Marx";
 Q.chancellor_party = 'Z';
 Q.spd_in_government = 0;
 Q.svd_in_government = 1;
 Q.rdp_in_government = 1;
-Q.lv_in_government = 1;
+Q.lvp_in_government = 1;
 Q.z_in_government = 1;
 Q.dnvp_in_government = 0;
 Q.nsfb_in_government = 0;

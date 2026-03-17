@@ -548,13 +548,13 @@ table {
 }
 .seat.z {
     fill: #000;
-    stroke: var(#fff);
+    stroke: #ffffff;
     stroke-width: 1.5px;
 }
 .seat.bvp {
     fill: #69A2BE;
 }
-.seat.lv {
+.seat.lvp {
     fill: #d9c640;
 }
 .seat.other {
