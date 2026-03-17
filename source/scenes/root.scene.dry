@@ -301,11 +301,11 @@ Q.unemployed_dnvp = 5;
 Q.unemployed_nsfb = 10;
 Q.unemployed_other = 4;
 
-Q.catholics_spd = 13;
-Q.catholics_svd = 15;
+Q.catholics_spd = 10;
+Q.catholics_svd = 13;
 Q.catholics_rdp = 1;
-Q.catholics_lv = 7;
-Q.catholics_z = 46;
+Q.catholics_lv = 6;
+Q.catholics_z = 52;
 Q.catholics_dnvp = 15;
 Q.catholics_nsfb = 1;
 Q.catholics_other = 2;
@@ -317,24 +317,24 @@ Q.catholics_other = 2;
 // note: the Z figures also include the BVP (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
-Q.spd_r = 25;
-Q.svd_r = 18;
-Q.rdp_r = 5;
-Q.lv_r = 14;
-Q.z_r = 19;
-Q.dnvp_r = 13;
-Q.nsfb_r = 2;
-Q.other_r = 4;
+Q.spd_r = 24.2;
+Q.svd_r = 18.3;
+Q.rdp_r = 4.8;
+Q.lv_r = 15.1;
+Q.z_r = 18.4;
+Q.dnvp_r = 13.5;
+Q.nsfb_r = 4.2;
+Q.other_r = 1.5;
 
 // diff from prev
-Q.old_spd_r = 25;
-Q.old_svd_r = 18;
-Q.old_rdp_r = 5;
-Q.old_lv_r = 14;
-Q.old_z_r = 19;
-Q.old_dnvp_r = 13;
-Q.old_nsfb_r = 2;
-Q.old_other_r = 4;
+Q.old_spd_r = 24.2;
+Q.old_svd_r = 18.3;
+Q.old_rdp_r = 4.8;
+Q.old_lv_r = 15.1;
+Q.old_z_r = 18.4;
+Q.old_dnvp_r = 13.5;
+Q.old_nsfb_r = 4.2;
+Q.old_other_r = 1.5;
 
 // sapd isn't formed yet, but it may be formed
 Q.sapd_r = 0;

@@ -342,7 +342,7 @@ data = [
         "id": "spd",
         "legend": "SPD",
         "name": "SPD",
-        "seats": Q.spd_r*5,
+        "seats": Math.round(Q.spd_r*5),
     }];
 if (Q.sapd_formed && Q.sapd_r) {
     data.push({
@@ -357,25 +357,25 @@ data = data.concat([
         "id": "svd",
         "legend": "SVD",
         "name": "SVD",
-        "seats": Q.svd_r*5,
+        "seats": Math.round(Q.svd_r*5),
     },
     {
         "id": "rdp",
         "legend": "RDP",
         "name": "RDP",
-        "seats": Q.rdp_r*5,
+        "seats": Math.round(Q.rdp_r*5),
     },
     {
         "id": "lv",
         "legend": "LV",
         "name": "LV",
-        "seats": Q.lv_r*5,
+        "seats": Math.round(Q.lv_r*5),
     },
     {
         "id": "z",
         "legend": "Center",
         "name": "Center",
-        "seats": (Q.z_r - 3)*5,
+        "seats": Math.round((Q.z_r - 3)*5),
     },
     {
         "id": "bvp",
@@ -387,19 +387,19 @@ data = data.concat([
         "id": "other",
         "legend": "Other",
         "name": "Other",
-        "seats": Q.other_r*5,
+        "seats": Math.round(Q.other_r*5),
     },
     {
         "id": "dnvp",
         "legend": "DNVP",
         "name": "DNVP",
-        "seats": Q.dnvp_r*5,
+        "seats": Math.round(Q.dnvp_r*5),
     },
     {
         "id": "nsfb",
         "legend": "NSFB",
         "name": "NSFB",
-        "seats": Q.nsfb_r*5,
+        "seats": Math.round(Q.nsfb_r*5),
     },
 ]);
 if (d3 && window) {
@@ -456,7 +456,7 @@ if (d3 && window) {
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!}
-{!<tr><td><div class="box" style='background-color:#ac2639; outline: 2px; outline-style: solid;'> </div></td><td>!} SPD: {!</td><td>!} [+ spd_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#ac2639'> </div></td><td>!} SPD: {!</td><td>!} [+ spd_r +]% {!</td></tr>!}
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div></td> <td> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td></tr>!} ?]
 
@@ -466,7 +466,7 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#d9c640'> </div></td><td>!} LV: {!</td><td>!} [+ lv_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#4b4b4b'> </div></td><td>!} **Z**: {!</td><td>!} **[+ z_minus_bvp_r +]** 3% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#4b4b4b; outline: 2px; outline-style: solid;'> </div></td><td>!} **Z**: {!</td><td>!} **[+ z_minus_bvp_r +]** {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} **BVP:** {!</td><td>!} **3%** {!</td></tr>!}
 
