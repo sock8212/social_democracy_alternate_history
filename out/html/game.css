@@ -547,8 +547,8 @@ table {
     fill: #c66cda;
 }
 .seat.z {
-    fill: #4b4b4b;
-    stroke: var(--border-color);
+    fill: #000;
+    stroke: var(#fff);
     stroke-width: 1.5px;
 }
 .seat.bvp {
