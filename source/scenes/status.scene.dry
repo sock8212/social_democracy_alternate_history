@@ -20,16 +20,30 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-Z position: [? if in_grand_coalition : <span style="color: #db7097;">Gra</span><span style="color: #c66cda;">nd </span><span style="color: #d9c640;">Coal</span><span style="color: #000;">tion</span> ?]
+Z position: [? if in_grand_coalition : <span style="color: #db7097;">Gra</span><span style="color: #c66cda;">nd </span><span style="color: #d9c640;">Coal</span><span style="color: #000;">ition</span> ?]
 
-[? if spd_in_government : SPD coalition dissent: [+ spd_dissent : coalition_dissent +] ?]
-[? if svd_in_government : SVD coalition dissent: [+ svd_dissent : coalition_dissent +] ?]
-[? if rdp_in_government : RDP coalition dissent: [+ rdp_dissent : coalition_dissent +] ?]
-[? if lvp_in_government : LVP coalition dissent: [+ lvp_dissent : coalition_dissent +] ?]
-[? if dnvp_in_government : DNVP coalition dissent: [+ dnvp_dissent : coalition_dissent +] ?]
-[? if nsfb_in_government : NSFB coalition dissent: [+ nsfb_dissent : coalition_dissent +] ?]
+[? if spd_in_government : <span style="color: #ac2639;">**SPD**</span> dissent: [+ spd_dissent : coalition_dissent +] ?]
+[? if svd_in_government : <span style="color: #db7097;">**SVD**</span> dissent: [+ svd_dissent : coalition_dissent +] ?]
+[? if rdp_in_government : <span style="color: #c66cda;">**RDP**</span> dissent: [+ rdp_dissent : coalition_dissent +] ?]
+[? if lvp_in_government : <span style="color: #d9c640;">**LVP**</span> dissent: [+ lvp_dissent : coalition_dissent +] ?]
+[? if dnvp_in_government : <span style="color: #598dca;">**DNVP**</span> dissent: [+ dnvp_dissent : coalition_dissent +] ?]
+[? if nsfb_in_government : <span style="color: #954b00;">**NSFB**</span> dissent: [+ nsfb_dissent : coalition_dissent +] ?]
 
+<span style="color: #ac2639;">**SPD**</span>: [+ spd_votes +]%
 
+<span style="color: #db7097;">**SVD**</span>: [+ svd_votes +]%
+
+<span style="color: #c66cda;">**RDP**</span>: [+ rdp_votes +]%
+
+<span style="color: #d9c640;">**LVP**</span>: [+ lvp_votes +]%
+
+<span style="color: #000;">**Z**</span>: [+ z_votes +]%
+
+<span style="color: #598dca;">**DNVP**</span>: [+ dnvp_votes +]%
+
+<span style="color: #954b00;">**NSFB**</span>: [+ nsfb_votes +]%
+
+<span style="color: #909090;">**Others**</span> [+ other_votes +]%
 Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
