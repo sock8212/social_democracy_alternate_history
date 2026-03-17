@@ -68,7 +68,6 @@ Inflation: [+ inflation_2 +]%
 Economic growth: [+ economic_growth_2 +]%
 
 
-
 # = Public Opinion
 
 @politics
@@ -76,17 +75,17 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-{? <span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #ac2639;">**SPD**</span> ?}: [+ spd_relation : relationships +]
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #ac2639;">**SPD**</span>: [+ spd_relation : relationships +]
 
-{? <span class="tooltip-text" title="Socialist People's Party" style="color: #db7097;">**SVD**</span> ?}: [+ svd_relation : relationships +]
+<span class="tooltip-text" title="Socialist People's Party" style="color: #db7097;">**SVD**</span>: [+ svd_relation : relationships +]
 
-{? <span class="tooltip-text" title="Radical Democratic Party" style="color: #c66cda;">**RDP**</span> ?}: [+ rdp_relation : relationships +]
+<span class="tooltip-text" title="Radical Democratic Party" style="color: #c66cda;">**RDP**</span>: [+ rdp_relation : relationships +]
 
-{? <span class="tooltip-text" title="United Liberal Party" style="color: #d9c640;">**LV**</span> ?}: [+ lv_relation : relationships +]
+<span class="tooltip-text" title="United Liberal Party" style="color: #d9c640;">**LV**</span>: [+ lv_relation : relationships +]
 
-{? <span class="tooltip-text" title="German National People's Party" style="color: #598dca;">**DNVP**</span> ?}: [+ dnvp_relation : relationships +]
+<span class="tooltip-text" title="German National People's Party" style="color: #598dca;">**DNVP**</span>: [+ dnvp_relation : relationships +]
 
-{? <span class="tooltip-text" title="National Socialist Freedom Bloc" style="color: #7a3c00;">**NSFB**</span> ?}: [+ nsfb_relation : relationships +]
+<span class="tooltip-text" title="National Socialist Freedom Bloc" style="color: #7a3c00;">**NSFB**</span>: [+ nsfb_relation : relationships +]
 
 = Party Leadership
 
@@ -182,8 +181,8 @@ Q.socialism_disp = Math.round(Q.socialism);
 <span style="color: #909090;">**Others**</span> [+ other_votes +]%
 
 Support for the Republic: [+ pro_republic_disp +]%
-Support for <span class="tooltip-text" title="The German Republic was founded by the socialist parties and to this day, they remain the strongest force in the liberal democracy that they established." style="color: #ba3737;">Socialism</span>: [+ socialism_disp +]%
-Support for <span class="tooltip-text" title="Nationalism, although weakened by the Silent Dictatorship's bloody collapse and the Zimmerwaldian peace that followed, remains a potent force in the Republic." style="color: #3a66b3;">Nationalism</span>: [+ nationalism_disp +]%
+Support for <span class="tooltip-text" title="The German Republic was founded by the socialist parties and to this day, they remain the strongest force in the liberal democracy that they established." style="color: #ba3737;">**Socialism**</span>: [+ socialism_disp +]%
+Support for <span class="tooltip-text" title="Nationalism, although weakened by the Silent Dictatorship's bloody collapse and the Zimmerwaldian peace that followed, remains a potent force in the Republic." style="color: #3a66b3;">**Nationalism**</span>: [+ nationalism_disp +]%
 
 **Detailed results for each demographic**
 
