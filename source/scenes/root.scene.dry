@@ -187,7 +187,7 @@ Q.reichswehr_loyalty = 0.65;
 // popular opinion
 // national ideology - on a binary scale
 // nationalism vs internationalism or pacifism or non-nationalism
-Q.nationalism = 45;
+Q.nationalism = 44;
 // socialism vs capitalism
 Q.socialism = 43;
 // pro-republic vs anti-republic
@@ -213,7 +213,7 @@ Q.nsdap_banned = 0;
 Q.coup_progress = 0;
 Q.capital_strike_progress = 0;
 
-Q.budget = 4;
+Q.budget = 5;
 
 // Proportion of different social groups
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
@@ -223,7 +223,7 @@ Q.old_middle = 13; // "old mittelstand"
 Q.new_middle = 14; // "new mittelstand"
 Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
-Q.unemployed = 8.6;
+Q.unemployed = 4.1;
 Q.catholics = 30;
 
 // unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
@@ -249,66 +249,66 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['spd', 'svd', 'rdp', 'lv', 'z', 'dnvp', 'nsfb', 'other'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 60; 
-Q.workers_kpd = 20;
-Q.workers_z = 5;
-Q.workers_ddp = 0;
-Q.workers_dvp = 0;
-Q.workers_dnvp = 5;
-Q.workers_nsdap = 0;
-Q.workers_other = 10;
+Q.workers_spd = 56; 
+Q.workers_svd = 22;
+Q.workers_rdp = 4;
+Q.workers_lv = 2;
+Q.workers_z = 6;
+Q.workers_dnvp = 6;
+Q.workers_nsfb = 2;
+Q.workers_other = 2;
 
-Q.old_middle_spd = 5;
-Q.old_middle_kpd = 0;
-Q.old_middle_z = 5;
-Q.old_middle_ddp= 10;
-Q.old_middle_dvp = 25;
-Q.old_middle_dnvp = 25;
-Q.old_middle_nsdap = 10;
-Q.old_middle_other = 10;
+Q.old_middle_spd = 3;
+Q.old_middle_svd = 1;
+Q.old_middle_rdp = 5;
+Q.old_middle_lv = 40;
+Q.old_middle_z = 10;
+Q.old_middle_dnvp = 31;
+Q.old_middle_nsfb = 4;
+Q.old_middle_other = 6;
 
-Q.new_middle_spd = 5;
-Q.new_middle_kpd = 1;
-Q.new_middle_z = 10;
-Q.new_middle_ddp= 25;
-Q.new_middle_dvp = 25;
-Q.new_middle_dnvp = 10;
-Q.new_middle_nsdap = 5;
-Q.new_middle_other = 15;
+Q.new_middle_spd = 8;
+Q.new_middle_svd = 5;
+Q.new_middle_rdp = 24;
+Q.new_middle_lv = 35;
+Q.new_middle_z = 5;
+Q.new_middle_dnvp = 15;
+Q.new_middle_nsfb = 4;
+Q.new_middle_other = 2;
 
-Q.rural_spd = 10;
-Q.rural_kpd = 0;
-Q.rural_z = 5;
-Q.rural_ddp= 5;
-Q.rural_dvp = 15;
-Q.rural_dnvp = 45;
-Q.rural_nsdap = 5;
-Q.rural_other = 10;
+Q.rural_spd = 19;
+Q.rural_svd = 13;
+Q.rural_rdp = 2;
+Q.rural_lv = 17;
+Q.rural_z = 10;
+Q.rural_dnvp = 30;
+Q.rural_nsfb = 5;
+Q.rural_other = 4;
 
-Q.unemployed_spd = 25;
-Q.unemployed_kpd = 55;
-Q.unemployed_z = 1;
-Q.unemployed_ddp = 0;
-Q.unemployed_dvp = 0;
+Q.unemployed_spd = 55;
+Q.unemployed_svd = 20;
+Q.unemployed_rdp = 2;
+Q.unemployed_lv = 1;
+Q.unemployed_z = 4;
 Q.unemployed_dnvp = 5;
-Q.unemployed_nsdap = 15;
-Q.unemployed_other = 9;
+Q.unemployed_nsfb = 10;
+Q.unemployed_other = 4;
 
-Q.catholics_spd = 15;
-Q.catholics_kpd = 2;
-Q.catholics_z = 50;
-Q.catholics_ddp = 0;
-Q.catholics_dvp = 5;
-Q.catholics_dnvp = 5;
-Q.catholics_nsdap = 0;
-Q.catholics_other = 12;
+Q.catholics_spd = 13;
+Q.catholics_svd = 15;
+Q.catholics_rdp = 1;
+Q.catholics_lv = 7;
+Q.catholics_z = 46;
+Q.catholics_dnvp = 15;
+Q.catholics_nsfb = 1;
+Q.catholics_other = 2;
 
 
 // Current Reichstag composition
@@ -352,7 +352,7 @@ Q.economic_records = [];
 
 
 // State of the government
-Q.president = "Hindenburg";
+Q.president = "Gessler";
 // starting chancellor: Wilhelm Marx
 Q.chancellor = "Marx";
 Q.chancellor_party = 'Z';

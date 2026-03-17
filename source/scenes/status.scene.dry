@@ -76,17 +76,17 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-{!<span class="tooltip-text" title="Center Party">Z</span>!}: [+ z_relation : relationships +]
+{!<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #ac2639;">**SPD**</span>!}: [+ spd_relation : relationships +]
 
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_relation : relationships +]
+{!<span class="tooltip-text" title="Socialist People's Party" style="color: #db7097;">**SVD**</span>!}: [+ svd_relation : relationships +]
 
-{!<span class="tooltip-text" title="German People's Party">DVP</span>!}: [+ dvp_relation : relationships +]
+{!<span class="tooltip-text" title="Radical Democratic Party" style="color: #c66cda;">**RDP**</span>!}: [+ rdp_relation : relationships +]
 
-{!<span class="tooltip-text" title="Communist Party of Germany">KPD</span>!}: [+ kpd_relation : relationships +]
+{!<span class="tooltip-text" title="United Liberal Party" style="color: #d9c640;">**LV**</span>!}: [+ lv_relation : relationships +]
 
-{!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_relation : relationships +]
+{!<span class="tooltip-text" title="German National People's Party" style="color: #598dca;">**DNVP**</span>!}: [+ dnvp_relation : relationships +]
 
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_relation : relationships +]
+{!<span class="tooltip-text" title="National Socialist Freedom Bloc" style="color: #7a3c00;">**NSFB**</span>!}: [+ nsfb_relation : relationships +]
 
 = Party Leadership
 
@@ -100,7 +100,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 [? if svd_ideology != 0: <span class="tooltip-text" title="German National People's Party" style="color: #598dca;">**DNVP**</span>: [? if dnvp_ideology = "Left": Popular Conservatism?][? if dnvp_ideology = "Centre": National Conservatism ?][? if dnvp_ideology = "Right": Authoritarian Conservatism ?] ([+ dnvp_leader +])?]
 
-[? if svd_ideology != 0: <span class="tooltip-text" title="National Socialist Freedom Bloc" style="color: #7A3C00;">**NSFB**</span>: [? if nsfb_ideology = "Pragmatic": Völkisch nationalism?][? if nsfb_ideology = "Radical": National Socialism ?] ([+ nsfb_leader +])?]
+[? if svd_ideology != 0: <span class="tooltip-text" title="National Socialist Freedom Bloc" style="color: #7a3c00;">**NSFB**</span>: [? if nsfb_ideology = "Pragmatic": Völkisch nationalism?][? if nsfb_ideology = "Radical": National Socialism ?] ([+ nsfb_leader +])?]
 
 = Internal Factions of the SPD
 
@@ -173,35 +173,30 @@ Q.socialism_disp = Math.round(Q.socialism);
 (if the election were to be held now):
 
 SPD: [+ spd_votes +]%
-
-[? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
-
-Z + BVP: [+ z_votes +]%
-
-KPD: [+ kpd_votes +]%
-
-[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ ddp_votes +]%
-
-DVP: [+ dvp_votes +]%
-
-DNVP: [+ dnvp_votes +]%
-
-NSDAP: [+ nsdap_votes +]%
-
+SVD: [+ svd_votes +]%
+RDP: [+ rdp_votes +]%
+LV: [+ lv_votes +]%
+Z + BVP: [+ spd_votes +]%
+DNVP: [+ spd_votes +]%
+NSFB: [+ spd_votes +]%
 Others: [+ other_votes +]%
+
+Support for the Republic: [+ pro_republic_disp +]%
+Support for <span class="tooltip-text" title="The German Republic was founded by the socialist parties and to this day, they remain the strongest force in the liberal democracy that they established." style="color: #ba3737;">Socialism</span>: [+ socialism_disp +]%
+Support for <span class="tooltip-text" title="Nationalism, although weakened by the Silent Dictatorship's bloody collapse and the Zimmerwaldian peace that followed, remains a potent force in the Republic." style="color: #3a66b3;">Nationalism</span>: [+ nationalism_disp +]%
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_spd_display +]%, Z: [+ workers_z_display +]%, KPD: [+ workers_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ workers_ddp_display +]%, DVP: [+ workers_dvp_display +]%; DNVP: [+ workers_dnvp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: SPD: [+ workers_spd_display +]%, SVD: [+ workers_svd_display +]%, RDP: [+ workers_rdp_display +]%, LV: [+ workers_lv_display +]%, Z: [+ workers_z_display +]%; DNVP: [+ workers_dnvp_display +]%, NSFB: [+ workers_nsfb_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
 
-New Middle Class: SPD: [+ new_middle_spd_display +]%, Z: [+ new_middle_z_display +]%, KPD: [+ new_middle_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ new_middle_ddp_display +]%, DVP: [+ new_middle_dvp_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+New Middle Class: SPD: [+ new_middle_spd_display +]%, SVD: [+ new_middle_svd_display +]%, RDP: [+ new_middle_rdp_display +]%, LV: [+ new_middle_lv_display +]%, Z: [+ new_middle_z_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSFB: [+ new_middle_nsfb_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
 
-Old Middle Class: SPD: [+ old_middle_spd_display +]%, Z: [+ old_middle_z_display +]%, KPD: [+ old_middle_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ old_middle_ddp_display +]%, DVP: [+ old_middle_dvp_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: SPD: [+ old_middle_spd_display +]%, SVD: [+ old_middle_svd_display +]%, RDP: [+ old_middle_rdp_display +]%, LV: [+ old_middle_lv_display +]%, Z: [+ old_middle_z_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSFB: [+ old_middle_nsfb_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
-Rural: SPD: [+ rural_spd_display +]%, Z: [+ rural_z_display +]%, KPD: [+ rural_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ rural_ddp_display +]%, DVP: [+ rural_dvp_display +]%; DNVP: [+ rural_dnvp_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: SPD: [+ rural_spd_display +]%, SVD: [+ rural_svd_display +]%, RDP: [+ rural_rdp_display +]%, LV: [+ rural_lv_display +]%: [+ rural_ddp_display +]%, Z: [+ rural_z_display +]%; DNVP: [+ rural_dnvp_display +]%, NSFB: [+ rural_nsfb_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
 
-Unemployed: SPD: [+ unemployed_spd_display +]%, Z: [+ unemployed_z_display +]%, KPD: [+ unemployed_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ unemployed_ddp_display +]%, DVP: [+ unemployed_dvp_display +]%; DNVP: [+ unemployed_dnvp_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: SPD: [+ unemployed_spd_display +]%, SVD: [+ unemployed_svd_display +]%, RDP: [+ unemployed_rdp_display +]%, LV: [+ unemployed_lv_display +]%, Z: [+ unemployed_z_display +]%; DNVP: [+ unemployed_dnvp_display +]%, NSFB: [+ unemployed_nsfb_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
 
-Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Catholics: SPD: [+ catholics_spd_display +]%, SVD: [+ catholics_svd_display +]%, RDP: [+ catholics_rdp_display +]%, LV: [+ catholics_LV_display +]%, Z: [+ catholics_z_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSFB: [+ catholics_nsfb_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
-Support for the Republic: [+ pro_republic_disp +]%
+
