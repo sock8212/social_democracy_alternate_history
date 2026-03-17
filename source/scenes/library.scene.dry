@@ -123,7 +123,7 @@ go-to: menu
 
 **Demographic Groups**
 
-**Working Class**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Most are socialist, supporting either the SPD or KPD. They make up 40-50% of the population.
+**Working Class**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Most are socialist, supporting either the SPD or SVD. They make up 40-50% of the population.
 
 **Old Mittelstand**: The old middle class consists of independent artisans, shopkeepers, and small-time businesspeople. They tend to be conservative and are the strongest base for the far right. 10-15% of the population.
 
@@ -466,7 +466,7 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#d9c640'> </div></td><td>!} LV: {!</td><td>!} [+ lv_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#4b4b4b; outline: 2px; outline-style: solid;'> </div></td><td>!} **Z**: {!</td><td>!} **[+ z_minus_bvp_r +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#4b4b4b; outline: 2px; outline-style: solid; outline-colour: white;'> </div></td><td>!} **Z**: {!</td><td>!} **[+ z_minus_bvp_r +]** {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} **BVP:** {!</td><td>!} **3%** {!</td></tr>!}
 

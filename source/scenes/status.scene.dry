@@ -31,9 +31,9 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-President: [+ president +]
+President: [? if president_party == "LV": <span style="color: #d9c640;">[+ president +]</span> </span> (<span style="color: #d9c640;">[+ president_party +]</span>) ?]
 
-Chancellor: [+ chancellor +] ([+ chancellor_party +])
+Chancellor: [? if chancellor_party == "Z": <span style="color: #000;">[+ chancellor +]</span> (<span style="color: #000;">[+ chancellor_party +]</span>) ?] 
 
 Reichstag composition:
 
@@ -172,12 +172,19 @@ Q.socialism_disp = Math.round(Q.socialism);
 (if the election were to be held now):
 
 <span style="color: #ac2639;">**SPD**</span>: [+ spd_votes +]%
+
 <span style="color: #db7097;">**SVD**</span>: [+ svd_votes +]%
+
 <span style="color: #c66cda;">**RDP**</span>: [+ rdp_votes +]%
+
 <span style="color: #d9c640;">**LV**</span>: [+ lv_votes +]%
-<span style="color: #4b4b4b;">**Z**</span>: [+ z_votes +]%
+
+<span style="color: #000;">**Z**</span>: [+ z_votes +]%
+
 <span style="color: #598dca;">**DNVP**</span>: [+ dnvp_votes +]%
+
 <span style="color: #954b00;">**NSFB**</span>: [+ nsfb_votes +]%
+
 <span style="color: #909090;">**Others**</span> [+ other_votes +]%
 
 Support for the Republic: [+ pro_republic_disp +]%
