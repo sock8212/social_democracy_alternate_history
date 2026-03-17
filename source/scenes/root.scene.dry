@@ -33,7 +33,7 @@ Q.historical_mode = 0;
 Q.old_demographics = 0;
 // use decimals for reichstag seats
 // TODO: not yet implemented
-Q.use_decimals = 0;
+Q.use_decimals = 1;
 
 // party resources
 Q.resources = 2;
@@ -42,8 +42,8 @@ Q.dues = 2;
 
 // the state of the party
 // overall dissent reduces every increase in party support.
-Q.dissent = 0.05;
-Q.dissent_percent = 5;
+Q.dissent = 0.20;
+Q.dissent_percent = 20;
 
 // factions
 Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
@@ -100,7 +100,7 @@ Q.moderate_plan_adopted = 0;
 
 // organizations
 
-// inter-party relations
+// inter-party relations, top out of date
 Q.z_relation = 50;
 Q.kpd_relation = 25;
 Q.ddp_relation = 60;
@@ -109,13 +109,33 @@ Q.dvp_relation = 35;
 Q.DNVP_relation = 10;
 Q.NSDAP_relation = 0;
 
+
+Q.spd_relation = 32;
+Q.svd_relation = 48;
+Q.rdp_relation = 40;
+Q.lv_relation = 63;
+Q.dnvp_relation = 39;
+Q.nsfb_relation = 10;
+
+
+Q.spd_leader = "Dittmann";
+Q.svd_leader = "Wels";
+Q.rdp_leader = "Erkelenz";
+Q.lv_leader = "Kahl";
+Q.dnvp_leader = "Hergt";
+Q.nsfb_leader = "Graefe";
+
+Q.spd_ideology = "Right";
+Q.svd_ideology = "Right";
+Q.rdp_ideology = "Centre";
+Q.lv_ideology = "Centre";
+Q.dnvp_ideology = "Left";
+
+
 Q.kpd_leader = "Thälmann";
 // alternative is the Conciliators as party leader
 Q.kpd_party_leader = "Thälmann";
-Q.z_leader = "Brüning";
-// party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
-Q.z_party_leader = "Marx";
-Q.nsdap_leader = "Hitler";
+
 
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 25;
@@ -154,23 +174,23 @@ Q.interior_police_loyalty = 0.45;
 
 Q.prussian_police_strength = 90;
 Q.prussian_police_militancy = 1;
-Q.prussian_police_loyalty = 0.5;
+Q.prussian_police_loyalty = 0.6;
 
 // strength includes actual military and de facto reserves?
 Q.reichswehr_strength = 100;
 Q.reichswehr_militancy = 5;
-Q.reichswehr_loyalty = 0.2;
+Q.reichswehr_loyalty = 0.65;
 
 // The state of the country
 
 // popular opinion
 // national ideology - on a binary scale
 // nationalism vs internationalism or pacifism or non-nationalism
-Q.nationalism = 60;
+Q.nationalism = 45;
 // socialism vs capitalism
-Q.socialism = 40;
+Q.socialism = 43;
 // pro-republic vs anti-republic
-Q.pro_republic = 59;
+Q.pro_republic = 67;
 
 Q.emergency_rule = 0;
 
@@ -235,7 +255,7 @@ Q.sapd_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 60;
+Q.workers_spd = 60; 
 Q.workers_kpd = 20;
 Q.workers_z = 5;
 Q.workers_ddp = 0;
