@@ -323,8 +323,8 @@ Q.rdp_r = 4.8;
 Q.lv_r = 15.1;
 Q.z_r = 18.4;
 Q.dnvp_r = 13.5;
-Q.nsfb_r = 4.2;
-Q.other_r = 1.5;
+Q.nsfb_r = 1.5;
+Q.other_r = 4.2;
 
 // diff from prev
 Q.old_spd_r = 24.2;
