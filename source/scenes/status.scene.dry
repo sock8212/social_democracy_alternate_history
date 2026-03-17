@@ -20,7 +20,7 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-Z position: [? if in_grand_coalition : <span style="color: #db7097;">Gra</span><span style="color: #c66cda;">nd </span><span style="color: #d9c640;">Coal</span><span style="color: #000;">ition</span> ?]
+<span style="color: #000000;">**Z**</span> position: [? if in_grand_coalition : <span style="color: #db7097;">Gra</span><span style="color: #c66cda;">nd </span><span style="color: #d9c640;">Coal</span><span style="color: #000;">ition</span> ?]
 
 [? if spd_in_government : <span style="color: #ac2639;">**SPD**</span> dissent: [+ spd_dissent : coalition_dissent +] ?]
 
@@ -38,20 +38,20 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-President: [? if president == "Gessler": <span class="tooltip-text" title="Otto Gessler is a moderate within the LVP. He is a strong advocate of bourgeois concentration and a moderate monarchist." style="color: #d9c640;">Gessler</span> </span> (<span style="color: #d9c640;">**[+ president_party +]**</span>) ?]
+President: [? if president == "Gessler": <span class="tooltip-text" title="Otto Gessler is a moderate within the LVP. He is a strong advocate of bourgeois concentration and a monarchist." style="color: #d9c640;">Gessler</span> </span> (<span style="color: #d9c640;">**[+ president_party +]**</span>) ?]
 
 Chancellor: [? if chancellor == "Marx": <span class="tooltip-text" title="Wilhelm Marx is a moderate Zentrum member. A republican, he favours tactical co-operation with all parties ranging from the SPD to the DNVP." style="color: #000;">Marx</span> (<span style="color: #000;">**[+ chancellor_party +]**</span>) ?] 
 
 Reichstag composition:
 
-<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #ac2639;">**SPD**</span>: [+ spd_r +]
-<span class="tooltip-text" title="Socialist People's Party" style="color: #db7097;">**SVD**</span>: [+ svd_r +]
-<span class="tooltip-text" title="Radical Democratic Party" style="color: #c66cda;">**RDP**</span>: [+ rdp_r +]
-<span class="tooltip-text" title="United Liberal Party" style="color: #d9c640;">**LVP**</span>: [+ lvp_r+]
-<span class="tooltip-text" title="Centre Party + Bavarian People's Party" style="color: #000;">**Z + BVP**</span>: [+ z_r +]
-<span class="tooltip-text" title="German National People's Party" style="color: #598dca;">**DNVP**</span>: [+ dnvp_r +]
-<span class="tooltip-text" title="National Socialist Freedom Movement" style="color: #7a3c00;">**NSFB**</span>: [+ nsfb_r +]
-<span class="tooltip-text" title="Others" style="color: #909090;">**Others**</span>: [+ other_r +]
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #ac2639;">**SPD**</span>: [+ spd_r +]%
+<span class="tooltip-text" title="Socialist People's Party" style="color: #db7097;">**SVD**</span>: [+ svd_r +]%
+<span class="tooltip-text" title="Radical Democratic Party" style="color: #c66cda;">**RDP**</span>: [+ rdp_r +]%
+<span class="tooltip-text" title="United Liberal Party" style="color: #d9c640;">**LVP**</span>: [+ lvp_r+]%
+<span class="tooltip-text" title="Centre Party + Bavarian People's Party" style="color: #000;">**Z + BVP**</span>: [+ z_r +]%
+<span class="tooltip-text" title="German National People's Party" style="color: #598dca;">**DNVP**</span>: [+ dnvp_r +]%
+<span class="tooltip-text" title="National Socialist Freedom Movement" style="color: #7a3c00;">**NSFB**</span>: [+ nsfb_r +]%
+<span class="tooltip-text" title="Others" style="color: #909090;">**Others**</span>: [+ other_r +]%
 
 Budget: [+ budget +]
 
