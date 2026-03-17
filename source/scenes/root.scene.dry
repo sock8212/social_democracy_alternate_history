@@ -108,7 +108,6 @@ Q.lvp_relation = 63;
 Q.dnvp_relation = 39;
 Q.nsfb_relation = 0;
 
-
 Q.spd_leader = "Dittmann";
 Q.svd_leader = "Wels";
 Q.rdp_leader = "Erkelenz";
@@ -355,6 +354,13 @@ Q.lvp_in_government = 1;
 Q.z_in_government = 1;
 Q.dnvp_in_government = 0;
 Q.nsfb_in_government = 0;
+
+Q.spd_dissent = 0;
+Q.svd_dissent = 2;
+Q.rdp_dissent = 2;
+Q.lvp_dissent = 1;
+Q.dnvp_dissent = 0;
+Q.nsfb_dissent = 0;
 
 // Popular Front = SPD + SVD + RDP + Z
 Q.in_popular_front_coalition = 0;
