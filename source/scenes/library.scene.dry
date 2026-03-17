@@ -199,18 +199,22 @@ Catholics: SPD: [+ catholics_spd_display +]%, SVD: [+ catholics_svd_display +]%,
 go-to: menu
 
 <span style="color: #ac2639;">**SPD**</span> - *Sozialdemokratische Partei Deutschlands* (Social Democratic Party of Germany) - a left-wing socialist party, seeking a path between reform and revolution. They were banned for most of the World War until the August Revolution. Highly popular among the working class. We have occasionally been in coalitions.
+
 Current relations: [+ spd_relation : relationships +]
 
 <span style="color: #db7097;">**SVD**</span> - *Sozialistische Volkspartei Deutschlands* (Socialist People's Party of Germany) - a moderate centre-left to left-wing socialist party, which seeks a reformist path towards socialism. They split from the SPD becuase of their support for war credits. We have often been in coalitions.
+
 Current relations: [+ svd_relation : relationships +]
 
 <span style="color: #c66cda;">**RDP**</span> - *Radikaldemokratische Partei* (Radical Democratic Party) - a progressive liberal party, formed from the parts of the FVp opposed to the liberal merger of 1918. We have sometimes been in coalitions.
+
 Current relations: [+ rdp_relation : relationships +]
 
 <span style="color: #d9c640;">**LVP**</span> - *Liberale Volkspartei* (Liberal People's Party) - a centrist liberal party, formed from the pre-War FVp and NLP. They are our preferred coalition partner (unless your name is Joseph Wirth).
+
 Current relations: [+ lvp_relation : relationships +]
 
-<span style="color: #000;">**Z**</span> - *Zentrumspartei* (Center Party) - this is us. We are a catholic Volkspartei with views stretching from the moderate left to the right. We survived the revolution and ensured a place for catholicism in the new order that emerged afterwards, and have served as a bulwark of governance ever since.
+<span style="color: #000;">**Z**</span> - *Zentrumspartei* (Center Party) - this is us. We are a big-tent party of political catholic with views stretching from the moderate left to the right. We survived the revolution and ensured a place for catholicism in the new order that emerged afterwards, and have served as a bulwark of governance ever since.
 
 <span style="color: #598dca;">**DNVP**</span> - *Deutschnationale Volkspartei* (German National People's Party) - a right-wing conservative party, with authoritarian, monarchist, and racist elements. It is supported by the former aristocracy, rural landowners, and conservative Lutherans. It has slowly moderated over the course of the twenties, hoping to enter government.
 
@@ -219,6 +223,7 @@ Current relations: [+ dnvp_relation : relationships +]
 <span style="color: #954b00;">**NSFB**</span>: - *Nationalsozialistische Freiheitsbewegung* - (National Socialist Freedom Movement, or Nazis) - a tight coalition of far-right, antisemitic, and anti-catholic parties. Led by Albrecht von Graefe, it seeks the overthrow of the Republic and it's replacement with an "organic" authoritarian state.
 
 Current relations: [+ nsfb_relation : relationships +]
+
 [? if sapd_formed: SAPD - Sozialistische Arbeiterpartei Deutschlands (Socialist Worker's Party of Germany) - a party recently formed in a split from the SPD, the SAPD is essentially an agglomeration of various left-wing splinter groups between the SPD and KPD. ?]
 
 **Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between us and DNVP. 
@@ -354,7 +359,7 @@ data = data.concat([
         "seats": Math.round(Q.rdp_r*5),
     },
     {
-        "id": "lv",
+        "id": "lvp",
         "legend": "LVP",
         "name": "LVP",
         "seats": Math.round(Q.lvp_r*5),
@@ -363,13 +368,13 @@ data = data.concat([
         "id": "z",
         "legend": "Center + BVP",
         "name": "Center",
-        "seats": Math.round(Q.z_r*5),
+        "seats": Math.round((Q.z_r*5)-15),
     },
     {
         "id": "bvp",
         "legend": "BVP",
         "name": "BVP",
-        "seats": 0,
+        "seats": 15,
     },
     {
         "id": "other",
@@ -454,9 +459,7 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#d9c640'> </div></td><td>!} LVP: {!</td><td>!} [+ lvp_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#4b4b4b; outline: 2px; outline-style: solid; outline-colour: white;'> </div></td><td>!} **Z**: {!</td><td>!} **[+ z_minus_bvp_r +]** {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} **BVP:** {!</td><td>!} **3%** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#4b4b4b; outline: 2px; outline-style: solid; outline-colour: white;'> </div></td><td>!} **Z + BVP**: {!</td><td>!} **[+ z_r +]** {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} Other parties: {!</td><td>!} [+ other_r +] % {!</td></tr>!}
 

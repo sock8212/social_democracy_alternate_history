@@ -548,7 +548,7 @@ table {
 }
 .seat.z {
     fill: #000;
-    stroke: #ffffff;
+    stroke: #bbbbbb;
     stroke-width: 1.5px;
 }
 .seat.bvp {
