@@ -106,7 +106,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The Clerical wing of Zentrum are generally conservative, and seek to defend the church. They are the strongest opponents of leaving the tower.">Clericals</span>!} strength: [+ clerical_strength : strength +], dissent: [+ clerical_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The christian labour movement wants to transform Zentrum into a interconfessional party on the moderate Right">Labor</span>!} strength: [+ labour_strength : strength +], dissent: [+ labour_dissent : dissent +]
+{!<span class="tooltip-text" title="The Christian labour movement's goal is the transformation of Zentrum into a interconfessional party on the moderate Right.">Labor</span>!} strength: [+ labour_strength : strength +], dissent: [+ labour_dissent : dissent +]
 
 
 

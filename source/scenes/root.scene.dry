@@ -50,7 +50,7 @@ Q.factions = ['left', 'center', 'clerical', 'labour'];
 // should this be normalized to 100%?
 Q.left_strength = 20;
 Q.left_dissent = 20;
-Q.center_strength = 35;
+Q.center_strength = 45;
 Q.center_dissent = 10;
 Q.clerical_strength = 20;
 Q.clerical_dissent = 25;
