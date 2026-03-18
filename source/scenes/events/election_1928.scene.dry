@@ -105,15 +105,15 @@ if (Q.z_r >= Q.spd_r && Q.z_r >= Q.svd_r && Q.z_r >= Q.dnvp_r) {
 // coalitions
 Q.weimar_coalition = parseFloat((Q.svd_r + Q.lvp_r + Q.z_r).toFixed(1));
 Q.grand_coalition = parseFloat((Q.svd_r + Q.rdp_r + Q.z_r + Q.lvp_r).toFixed(1));
-Q.bourgeois_coalition = Q.rdp_r + Q.z_r + Q.lvp_r + Q.other_r;
-Q.center_right_coalition = Q.z_r + Q.lvp_r + Q.other_r + Q.dnvp_r;
-Q.right_coalition = Q.z_r + Q.other_r + Q.dnvp_r + Q.nsfb_r;
-Q.far_right_coalition = Q.dnvp_r + Q.nsfb_r;
-Q.left_front = Q.spd_r + Q.svd_r;
+Q.bourgeois_coalition = parseFloat((Q.rdp_r + Q.z_r + Q.lvp_r + Q.other_r).toFixed(1));
+Q.center_right_coalition = parseFloat((Q.z_r + Q.lvp_r + Q.other_r + Q.dnvp_r).toFixed(1));
+Q.right_coalition = parseFloat((Q.z_r + Q.other_r + Q.dnvp_r + Q.nsfb_r).toFixed(1));
+Q.far_right_coalition = parseFloat((Q.dnvp_r + Q.nsfb_r).toFixed(1));
+Q.left_front = parseFloat((Q.spd_r + Q.svd_r).toFixed(1));
 // i'm wirthing it. 
-Q.popular_front_coalition = Q.spd_r + Q.svd_r + Q.rdp_r + Q.z_r - 3;
+Q.popular_front_coalition = parseFloat((Q.spd_r + Q.svd_r + Q.rdp_r + Q.z_r - 3).toFixed(1));
 // canon ending???
-Q.united_front = Q.spd_r + Q.svd_r + Q.rdp_r;
+Q.united_front = parseFloat((Q.spd_r + Q.svd_r + Q.rdp_r).toFixed(1));
 
 Q.leverage = Q.z_r;
 
@@ -296,17 +296,18 @@ There are some potential coalition arrangements.
 
 @coalition_menu
 
-- @spd_majority
-- @weimar_coalition
 - @grand_coalition
+- @weimar_coalition
+- @center_right_coalition
+- @popular_front_coalition
+- @spd_majority
 - @new_grand_coalition
 - @unity_government
 - @far_right_coalition
 - @no_majority
 - @brauns_dilemma
 - @left_front
-- @popular_front_coalition
-- @right_coalition
+
 
 # TODO: black-brown coalition
 
@@ -897,13 +898,17 @@ go-to: ministries
 
 Rudolf Breitscheid has been appointed chancellor.
 
+unavailable-subtitle: SPD + SVD + RDP + Z ([+ popular_front_coalition +]%) - [? if ((spd_relation < 65 and spd_ideology == "Centre") or (spd_relation < 45 and spd_ideology == "Right")): We do not have good enough relations with the SPD. ?][? if spd_ideology == "Left": The SPD is too radical to tame. ?][? if spd_coalition < 3 : The Social Democrats are unwilling to compromise at all. ?]
+view-if: popular_front_coalition >= 50
+choose-if: (((spd_relation >= 65 and spd_ideology == "Centre") or (spd_relation >= 45 and spd_ideology == "Right")) and (spd_ideology == "Centre" or spd_ideology == "Right") and spd_coalition >= 3)
 
 @grand_coalition
 title: We can form a Grand Coalition.
-view-if: grand_coalition >= 50 and grand_coalition_failed == 0
-subtitle: SPD + Z + BVP + [+ ddp_name +] + DVP ([+ grand_coalition +]%)
-on-arrival: in_grand_coalition = 1; in_popular_front = 0; in_left_front = 0
-go-to: grand_coalition_spd_lead if (n_elections <= 1 and largest_party == "SPD") or (largest_party == "SPD" and spd_r >= 30) or president = "Braun"; grand_coalition_z_lead if president != "Braun" and ((n_elections > 1 and spd_r < 30) or (n_elections <= 1 and largest_party != "SPD"))
+view-if: grand_coalition >= 50 and ((svd_relation >= 45 and svd_ideology == "Left") or (svd_relation >= 35 and svd_ideology == "Centre") or (svd_relation >= 25 and svd_ideology == "Right")) and ((rdp_relation >= 40 and rdp_ideology == "Left") or (rdp_relation >= 25 and rdp_ideology == "Right"))
+subtitle: SVD + RDP + LVP + Z + BVP ([+ grand_coalition +]%)
+unavailable_subtitle: [? if ((svd_relation < 45 and svd_ideology == "Left") or (svd_relation < 35 and svd_ideology == "Centre") or (svd_relation < 25 and svd_ideology == "Right")) : The SVD distrusts us too much. ?][? if ((rdp_relation >= 40 and rdp_ideology == "Left") or (rdp_relation >= 25 and rdp_ideology == "Right")) : The RDP distrusts us too much. ?]
+on-arrival: in_grand_coalition = 1; in_popular_front = 0; in_left_front = 0; in_united_front = 0; in_centre_right_coalition = 0;
+go-to: grand_coalition_z_lead 
 
 # TODO: if there are enough votes to form a grand coalition, who leads? Does the SPD lead or does Brüning (Z) lead? In reality this depended on Hindenburg's will, basically, which in turn depended on what his camarilla supported.
 # In the first election, SPD always leads. In subsequent elections, if spd_r >= 29 then SPD leads, otherwise Z leads?
