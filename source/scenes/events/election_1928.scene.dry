@@ -430,7 +430,7 @@ Alternatively, Braun could use the emergency powers of the presidency. Article 4
 - @far_right_win: Let the Nazis form their government.
 
 
-@left_coalition
+@left_front
 title: Is a United Left coalition possible?
 subtitle: SPD + KPD [? if sapd_formed: + SAPD ?] ([+ left_coalition +]%)
 unavailable-subtitle: SPD + KPD [? if sapd_formed: + SAPD ?] ([+ left_coalition +]%). [? if kpd_relation < 50 : We do not have adequate relations with the KPD. ?][? if communist_coalition < 3 : The Communists are too committed to their radical ways to partake in government. ?]
