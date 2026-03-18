@@ -111,7 +111,7 @@ Q.right_coalition = Q.z_r + Q.other_r + Q.dnvp_r + Q.nsfb_r;
 Q.far_right_coalition = Q.dnvp_r + Q.nsfb_r;
 Q.left_front = Q.spd_r + Q.svd_r;
 // i'm wirthing it. 
-Q.popular_front_coalition = Q.spd_r + Q.svd_r + Q.rdp_r + Q.z_r - 3;
+Q.popular_front = Q.spd_r + Q.svd_r + Q.rdp_r + Q.z_r - 3;
 // canon ending???
 Q.united_front = Q.spd_r + Q.svd_r + Q.rdp_r;
 
