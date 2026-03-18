@@ -52,7 +52,7 @@ for (var party of Q.parties) {
         }
         new_party_sum += Q[party + '_r'];
     } else {
-        Q[party + '_r'] = Q[party + '_votes'].toFixed(2);
+        Q[party + '_r'] = Q[party + '_votes'];
     }
     // if we use decimals, then we might want to truncate the numbers
     if (Q.use_decimals) {
@@ -103,8 +103,8 @@ if (Q.z_r >= Q.spd_r && Q.z_r >= Q.svd_r && Q.z_r >= Q.dnvp_r) {
 }
 
 // coalitions
-Q.weimar_coalition = Q.svd_r + Q.rdp_r + Q.z_r - 3;
-Q.grand_coalition = Q.svd_r + Q.rdp_r + Q.z_r + Q.lvp_r;
+Q.weimar_coalition = parseFloat((Q.svd_r + Q.lvp_r + Q.z_r).toFixed(1));
+Q.grand_coalition = parseFloat((Q.svd_r + Q.rdp_r + Q.z_r + Q.lvp_r).toFixed(1));
 Q.bourgeois_coalition = Q.rdp_r + Q.z_r + Q.lvp_r + Q.other_r;
 Q.center_right_coalition = Q.z_r + Q.lvp_r + Q.other_r + Q.dnvp_r;
 Q.right_coalition = Q.z_r + Q.other_r + Q.dnvp_r + Q.nsfb_r;
@@ -278,7 +278,7 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-Weimar Coalition (SVD + RDP + Z): [+ weimar_coalition +]%
+Weimar Coalition (SVD + RDP + Z + BVP): [+ weimar_coalition +]%
 
 Grand Coalition (SVD + RDP + LVP + Z + BVP): [+ grand_coalition +]%
 
