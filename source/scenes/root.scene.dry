@@ -48,13 +48,13 @@ Q.dissent_percent = 15;
 // factions
 Q.factions = ['left', 'center', 'clerical', 'labour'];
 // should this be normalized to 100%?
-Q.left_strength = 20;
+Q.left_strength = 15;
 Q.left_dissent = 20;
-Q.center_strength = 35;
+Q.center_strength = 30;
 Q.center_dissent = 10;
-Q.clerical_strength = 20;
+Q.clerical_strength = 15;
 Q.clerical_dissent = 25;
-Q.labour_strength = 30;
+Q.labour_strength = 20;
 Q.labour_dissent = 10;
 
 
@@ -66,6 +66,10 @@ Q.reformists_resigned = 0;
 
 // have we discovered neorevisionism?
 Q.neorevisionism = 0;
+
+// NEW INDICATORS
+// SPD support for a PopFront
+Q.spd_coalition = 0;
 
 // crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;
@@ -79,8 +83,7 @@ Q.wtb_support = 0;
 Q.pacifism = 0;
 // Support for democratic reform within the SPD relative to 1928
 Q.democratization = 0;
-// Support for a communist coalition relative to 1928
-Q.communist_coalition = 0;
+
 // economic_plan: have we adopted *any* economic plan?
 // 1 - WTB plan, 2 - AfA-bund plan, 3 - radical plan (mass nationalization of industries)
 Q.economic_plan = 0;
@@ -371,20 +374,19 @@ Q.in_grand_coalition = 1;
 // Bourgeois coalition = RDP + LVP + Z + Others
 Q.in_bourgeois_coalition = 0;
 // Centre-right coalition = LVP + Z + Others + DNVP
-Q.in_center_right_coalition = 0;
+Q.in_centre_right_coalition = 0;
+// Left Front = SPD + SVD
+Q.in_left_front = 0;
+// United Front = SPD + SVD + RDP
+Q.in_united_front = 0;
 // emergency government containing the SPD: only president Braun can do this.
 Q.in_emergency_government = 0;
 Q.grand_coalition_failed = 0;
 // if the SPD is ruling as part of a minority government
 Q.in_minority_government = 0;
 // national unity governmet
-Q.in_weimar_coalition = 0;
-Q.in_grand_coalition = 0;
-Q.in_popular_front = 0;
-Q.in_bourgeois_coalition = 0;
-Q.left_front = 0;
-Q.united_front = 0;
-Q.in_centre_right_coalition = 0;
+
+
 
 // if you're in a coalition, this is an incremental counter for how many times dissent has happened from the right.
 Q.coalition_dissent = 0;

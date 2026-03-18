@@ -100,9 +100,9 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Internal Factions of <span style="color: #000;">**Zentrum**</span>:
 
-{!<span class="tooltip-text" title="The Left are a collection of progressive clerics and trade unionists. They are interested in co-operation with the socialists and defending the Republic.">Left</span>!} strength: [+ labour_strength : strength +], dissent: [+ left_dissent : dissent +]
+{!<span class="tooltip-text" title="The Left are a collection of progressive clerics and trade unionists. They are interested in co-operation with the socialists and defending the Republic.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Center are pragmatists, seeking the defence of catholic interests above all else.">Center</span>!} strength: [+ labour_strength : strength +], dissent: [+ center_dissent : dissent +]
+{!<span class="tooltip-text" title="The Center are pragmatists, seeking the defence of catholic interests above all else.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
 
 {!<span class="tooltip-text" title="The Clerical wing of Zentrum are generally conservative, and seek to defend the church. They are the strongest opponents of leaving the tower.">Clericals</span>!} strength: [+ clerical_strength : strength +], dissent: [+ clerical_dissent : dissent +]
 
