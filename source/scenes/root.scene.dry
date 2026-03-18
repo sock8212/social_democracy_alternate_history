@@ -50,7 +50,7 @@ Q.factions = ['left', 'center', 'clerical', 'labour'];
 // should this be normalized to 100%?
 Q.left_strength = 20;
 Q.left_dissent = 20;
-Q.center_strength = 45;
+Q.center_strength = 35;
 Q.center_dissent = 10;
 Q.clerical_strength = 20;
 Q.clerical_dissent = 25;
@@ -363,7 +363,7 @@ Q.dnvp_dissent = 0;
 Q.nsfb_dissent = 0;
 
 // Popular Front = SPD + SVD + RDP + Z
-Q.in_popular_front_coalition = 0;
+Q.in_popular_front = 0;
 // Weimar coalition = SVD + RDP + Z, often with SPD toleration
 Q.in_weimar_coalition = 0;
 // Grand coalition = SVD + RDP + LVP + Z
@@ -371,7 +371,7 @@ Q.in_grand_coalition = 1;
 // Bourgeois coalition = RDP + LVP + Z + Others
 Q.in_bourgeois_coalition = 0;
 // Centre-right coalition = LVP + Z + Others + DNVP
-Q.in_centre_right_coalition = 0;
+Q.in_center_right_coalition = 0;
 // emergency government containing the SPD: only president Braun can do this.
 Q.in_emergency_government = 0;
 Q.grand_coalition_failed = 0;
@@ -391,7 +391,6 @@ Q.spd_toleration = 0;
 Q.minority_government = 0;
 
 // ministries - which parties control the ministries?
-// starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
 // is the agricultural ministry useful at all?
 Q.foreign_minister = 'Rathenau';
 Q.foreign_minister_party = 'RDP';

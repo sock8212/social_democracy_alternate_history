@@ -61,7 +61,6 @@ go-to: menu
 **1926**: A referendum on the expropriation of the princes, supported by the SPD and KPD, fails.
 
 @curr_gov
-go-to: cabinet if spd_in_government; menu if not spd_in_government
 
 = Current Government
 
@@ -71,33 +70,30 @@ Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
 Reichstag composition:
 
-# 1928: 30, 1930: 25, 1932: 22
-SPD: [+ spd_r +]%
-[? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
-# 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_r +]%
-# 1928: 10, 1930: 13
-KPD: [+ kpd_r +]%
-# 1928: 5, 1930: 4 (as DstP)
-[+ ddp_name +]: [+ ddp_r +]%
-# 1928: 9, 1930: 5
-DVP: [+ dvp_r +]%
-# 1928: 14, 1930: 7
-DNVP: [+ dnvp_r +]%
-# 1928: 3, 1930: 18
-NSDAP: [+ nsdap_r +]%
-# 1928: 9, 1930: 10
-Others: [+ other_r +]%
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #ac2639;">**SPD**</span>: [+ spd_r +]%
+<span class="tooltip-text" title="Socialist People's Party" style="color: #db7097;">**SVD**</span>: [+ svd_r +]%
+<span class="tooltip-text" title="Radical Democratic Party" style="color: #c66cda;">**RDP**</span>: [+ rdp_r +]%
+<span class="tooltip-text" title="United Liberal Party" style="color: #d9c640;">**LVP**</span>: [+ lvp_r+]%
+<span class="tooltip-text" title="Centre Party + Bavarian People's Party" style="color: #000;">**Z + BVP**</span>: [+ z_r +]%
+<span class="tooltip-text" title="German National People's Party" style="color: #598dca;">**DNVP**</span>: [+ dnvp_r +]%
+<span class="tooltip-text" title="National Socialist Freedom Movement" style="color: #7a3c00;">**NSFB**</span>: [+ nsfb_r +]%
+<span class="tooltip-text" title="Others" style="color: #909090;">**Others**</span>: [+ other_r +]%
 
-SPD position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
-[? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: SPD majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
+<span style="color: #000000;">**Z**</span> position: [? if in_grand_coalition : <span style="color: #db7097;">Gra</span><span style="color: #c66cda;">nd </span><span style="color: #d9c640;">Coal</span><span style="color: #000;">ition</span> ?]
 
-[? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
+[? if spd_in_government : <span style="color: #ac2639;">**SPD**</span> dissent: [+ spd_dissent : coalition_dissent +] ?]
 
-[? if spd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
+[? if svd_in_government : <span style="color: #db7097;">**SVD**</span> dissent: [+ svd_dissent : coalition_dissent +] ?]
 
-@cabinet
-go-to: menu
+[? if rdp_in_government : <span style="color: #c66cda;">**RDP**</span> dissent: [+ rdp_dissent : coalition_dissent +] ?]
+
+[? if lvp_in_government : <span style="color: #d9c640;">**LVP**</span> dissent: [+ lvp_dissent : coalition_dissent +] ?]
+
+[? if dnvp_in_government : <span style="color: #598dca;">**DNVP**</span> dissent: [+ dnvp_dissent : coalition_dissent +] ?]
+
+[? if nsfb_in_government : <span style="color: #954b00;">**NSFB**</span> dissent: [+ nsfb_dissent : coalition_dissent +] ?]
+
+Internal dissent: [+ dissent_percent : dissent +]
 
 Current cabinet:
 
@@ -116,6 +112,7 @@ Foreign: [+ foreign_minister_party +]
 Reichswehr: [+ reichswehr_minister_party +]
 
 Agriculture: [+ agriculture_minister_party +]
+go-to: menu
 
 
 @demographics
@@ -152,7 +149,7 @@ set-jump: election_projections
 
 #Support for Nationalism: [+ nationalism +]%
 
-Support for the Republic: [+ pro_republic_disp +]%
+#Support for the Republic: [+ pro_republic_disp +]%
 
 
 @election_projections
@@ -178,7 +175,9 @@ go-to: menu
 <span style="color: #909090;">**Others**</span> [+ other_votes +]%
 
 Support for the Republic: [+ pro_republic_disp +]%
+
 Support for <span class="tooltip-text" title="The German Republic was founded by the socialist parties and to this day, they remain the strongest force in the liberal democracy that they established." style="color: #ba3737;">**Socialism**</span>: [+ socialism_disp +]%
+
 Support for <span class="tooltip-text" title="Nationalism, although weakened by the Silent Dictatorship's bloody collapse and the Zimmerwaldian peace that followed, remains a potent force in the Republic." style="color: #3a66b3;">**Nationalism**</span>: [+ nationalism_disp +]%
 
 **Detailed results for each demographic**
