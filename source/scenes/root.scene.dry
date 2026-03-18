@@ -378,8 +378,13 @@ Q.grand_coalition_failed = 0;
 // if the SPD is ruling as part of a minority government
 Q.in_minority_government = 0;
 // national unity governmet
+Q.in_weimar_coalition = 0;
+Q.in_grand_coalition = 0;
+Q.in_popular_front = 0;
+Q.in_bourgeois_coalition = 0;
 Q.left_front = 0;
 Q.united_front = 0;
+Q.in_centre_right_coalition = 0;
 
 // if you're in a coalition, this is an incremental counter for how many times dissent has happened from the right.
 Q.coalition_dissent = 0;
