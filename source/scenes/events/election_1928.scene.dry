@@ -926,7 +926,7 @@ go-to: ministries
 
 @drop_interior
 title: Drop the Interior Ministry.
-view-if: interior_minister_party = "SVD"
+view-if: interior_minister_party = "Z"
 on-arrival: interior_minister_party = "SVD"; interior_minister = "Severing"; leverage += 5;
 tags: drop_mins_1928
 go-to: ministries
