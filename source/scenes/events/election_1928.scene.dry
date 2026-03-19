@@ -300,8 +300,8 @@ There are some potential coalition arrangements.
 - @weimar_coalition
 - @popular_front_coalition
 - @right_coalition
-- @spd_majority
-- @new_grand_coalition
+#- @spd_majority
+#- @new_grand_coalition
 #- @far_right_coalition
 - @no_majority
 - @brauns_dilemma
@@ -505,7 +505,7 @@ on-arrival: chancellor = "Brüning"; chancellor_party = "Z"
 
 There is no path to an obviously workable majority. Since President Hindenburg is unwilling to work with a minority or caretaker SPD government, his preferred chancellor is Heinrich Brüning of the Center Party, who could lead a "presidential" government.
 
-- @new_grand_coalition: We will try to form a new grand coalition.
+#- @new_grand_coalition: We will try to form a new grand coalition.
 - @new_elections: We will have new elections.
 
 # - if NSDAP is the largest party and the 
