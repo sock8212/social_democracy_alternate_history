@@ -808,6 +808,7 @@ on-arrival: in_grand_coalition = 1; in_popular_front = 0; in_left_front = 0; in_
 go-to: grand_coalition_menu
 
 @grand_coalition_menu
+
 We have enough votes to form a Grand Coalition around the political centre. This is our preferred coalition!
 
 Who should be the chancellor?
