@@ -269,8 +269,8 @@ Q.old_middle_other = 5;
 
 Q.new_middle_spd = 8;
 Q.new_middle_svd = 5;
-Q.new_middle_rdp = 24;
-Q.new_middle_lvp = 35;
+Q.new_middle_rdp = 22;
+Q.new_middle_lvp = 37;
 Q.new_middle_z = 5;
 Q.new_middle_dnvp = 15;
 Q.new_middle_nsfb = 4;
