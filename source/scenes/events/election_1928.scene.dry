@@ -113,7 +113,7 @@ Q.left_front = parseFloat((Q.spd_r + Q.svd_r).toFixed(1));
 // i'm wirthing it. 
 Q.popular_front_coalition = parseFloat((Q.spd_r + Q.svd_r + Q.rdp_r + Q.z_r - 3).toFixed(1));
 // canon ending???
-Q.united_front = parseFloat((Q.spd_r + Q.svd_r + Q.rdp_r).toFixed(1));
+Q.united_front_coalition = parseFloat((Q.spd_r + Q.svd_r + Q.rdp_r).toFixed(1));
 
 Q.leverage = Q.z_r;
 
@@ -284,7 +284,7 @@ Grand Coalition (SVD + RDP + LVP + Z + BVP): [+ grand_coalition +]%
 
 Left Front (SPD + SVD): [+ left_front +]%
 
-United Front (SPD + SVD + RDP): [+ united_front +]%
+United Front (SPD + SVD + RDP): [+ united_front_coalition +]%
 
 Centre-right Coalition (LVP + Z + BVP + DVP + Others + DNVP): [+ center_right_coalition +]%
 
@@ -520,7 +520,7 @@ Even though the DNVP is very reluctant to participate in such a coalition, they 
 
 @no_majority
 title: There is no clear governing majority.
-view-if: weimar_coalition < 50 and (grand_coalition < 50) and president = "Hindenburg" and far_right_coalition < 50;
+view-if: weimar_coalition < 50 and grand_coalition < 50 and popular_front_coalition < 50 and united_front_coalition < 50 and far_right_coalition < 50;
 on-arrival: no_majority_elections += 1
 go-to: no_majority_bruning if chancellor = "Brüning" or chancellor = "Wirth"; no_majority_spd if chancellor_party = "SPD" or chancellor == "Marx";
 
