@@ -673,23 +673,28 @@ Who should be the chancellor?
 title: Hermann Müller for Chancellor
 subtitle: Müller is a widely respected member of the USPD. Perhaps granting them the chancellery may increase our leverage?
 on-arrival: chancellor = "Müller"; chancellor_party = "SVD"; svd_relation += 7; spd_relation += 3; leverage += 5; 
-go-to: ministries 
 
 Hermann Müller of the USPD has been appointed chancellor. The Left is pleased at you offering an olive branch to them.
 
+- @ministries: We must select our ministries.
+
 @marx
 title: Wilhelm Marx for Chancellor
+subtitle: Marx is a key leader of Zentrum, and a moderate within the party.
 on-arrival: chancellor = "Marx"
-go-to: ministries
 
 Wilhelm Marx has been appointed chancellor.
 
+- @ministries: We must select our ministries.
+
 @wirth
 title: Joseph Wirth for Chancellor
-on-arrival: chancellor = "Z"; svd_relation += 5; spd_relation += 2; dnvp_relation -= 3;
-go-to: ministries
+subtitle: Wirth is a left-leaning member of Zentrum, widely respected among the left.
+on-arrival: chancellor = "Z"; svd_relation += 5; spd_relation += 2; dnvp_relation -= 4;
 
 Joseph Wirth, a leader of our progressive wing, has been appointed chancellor. 
+
+- @ministries: We must select our ministries.
 
 @grand_coalition
 title: We can form a Grand Coalition.
@@ -713,23 +718,28 @@ Who should be the chancellor?
 title: Hermann Müller for Chancellor
 subtitle: Müller is a widely respected member of the USPD. Perhaps granting them the chancellery may increase our leverage?
 on-arrival: chancellor = "Müller"; chancellor_party = "SVD"; svd_relation += 7; spd_relation += 3; leverage += 5; 
-go-to: ministries 
 
 Hermann Müller of the USPD has been appointed chancellor. The Left is pleased at you offering an olive branch to them.
 
+- @ministries: We must select our ministries.
+
 @marx_groko
 title: Wilhelm Marx for Chancellor
+subtitle: Marx is a key leader of Zentrum, and a moderate within the party.
 on-arrival: chancellor = "Marx"; chancellor_party = "Z"
-go-to: ministries
 
 Wilhelm Marx has been appointed chancellor.
 
+- @ministries: We must select our ministries.
+
 @wirth_groko
 title: Joseph Wirth for Chancellor
+subtitle: Wirth is a left-leaning member of Zentrum, widely respected among the left.
 on-arrival: chancellor = "Wirth"; chancellor_party = "Z"; svd_relation += 5; spd_relation += 2; dnvp_relation -= 3;
-go-to: ministries
 
 Joseph Wirth, a leader of our progressive wing, has been appointed chancellor. 
+
+- @ministries: We must select our ministries.
 
 
 @new_elections
