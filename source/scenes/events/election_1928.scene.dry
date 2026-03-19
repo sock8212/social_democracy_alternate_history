@@ -782,18 +782,21 @@ title: Hermann Müller for Chancellor
 subtitle: Müller is a widely respected member of the USPD. Perhaps granting them the chancellery may increase our leverage?
 on-arrival: chancellor = "Müller"; chancellor_party = "SVD"; svd_relation += 7; spd_relation += 3; leverage += 5; 
 go-to: ministries 
+
 Hermann Müller of the USPD has been appointed chancellor. The Left is pleased at you offering an olive branch to them.
 
 @marx
 title: Wilhelm Marx for Chancellor
 on-arrival: chancellor = "Marx"
 go-to: ministries
+
 Wilhelm Marx has been appointed chancellor.
 
 @wirth
 title: Joseph Wirth for Chancellor
 on-arrival: chancellor = "Z"; svd_relation += 5; spd_relation += 2; dnvp_relation -= 3;
 go-to: ministries
+
 Joseph Wirth, a leader of our progressive wing, has been appointed chancellor. 
 
 @grand_coalition
@@ -818,18 +821,21 @@ title: Hermann Müller for Chancellor
 subtitle: Müller is a widely respected member of the USPD. Perhaps granting them the chancellery may increase our leverage?
 on-arrival: chancellor = "Müller"; chancellor_party = "SVD"; svd_relation += 7; spd_relation += 3; leverage += 5; 
 go-to: ministries 
+
 Hermann Müller of the USPD has been appointed chancellor. The Left is pleased at you offering an olive branch to them.
 
 @marx
 title: Wilhelm Marx for Chancellor
 on-arrival: chancellor = "Marx"; chancellor_party = "Z"
 go-to: ministries
+
 Wilhelm Marx has been appointed chancellor.
 
 @wirth
 title: Joseph Wirth for Chancellor
 on-arrival: chancellor = "Wirth"; chancellor_party = "Z"; svd_relation += 5; spd_relation += 2; dnvp_relation -= 3;
 go-to: ministries
+
 Joseph Wirth, a leader of our progressive wing, has been appointed chancellor. 
 
 
