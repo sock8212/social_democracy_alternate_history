@@ -522,7 +522,7 @@ Even though the DNVP is very reluctant to participate in such a coalition, they 
 title: There is no clear governing majority.
 view-if: weimar_coalition < 50 and grand_coalition < 50 and popular_front_coalition < 50 and united_front_coalition < 50 and far_right_coalition < 50
 on-arrival: no_majority_elections += 1
-go-to: no_majority_bruning if chancellor = "Brüning" or chancellor = "Wirth"; no_majority_spd if chancellor_party = "SPD" or chancellor == "Marx"
+go-to: no_majority_spd if chancellor_party = "SPD" or chancellor == "Marx"
 
 # TODO: if there is an anti-democratic coalition majority, you should appoint Papen.
 
@@ -538,10 +538,6 @@ There is no path to an obviously workable majority. Since President Hindenburg i
 - @new_elections: We will have new elections.
 
 # - if NSDAP is the largest party and the 
-
-@no_majority_bruning
-go-to: no_majority_bruning_toleration if (no_majority_elections <= 3 and anti_democratic_coalition <= 50); hindenburg_appoints_papen if no_majority_elections > 3 or anti_democratic_coalition > 50
-
 
 @new_grand_coalition
 title: A "New Grand Coalition" of all the constitutional parties?
@@ -581,12 +577,6 @@ on-arrival: leverage -= 10; chancellor = "Braun"; chancellor_party = "SPD"
 go-to: ministries
 
 We have assembled a new coalition under Otto Braun.
-
-- @brauns_dilemma
-- @toleration_bruning: We will tolerate a minority government led by Brüning.
-- @toleration_wirth: We will tolerate a minority government led by Joseph Wirth.
-- @new_elections: There will be new elections.
-
 
 @toleration_wirth
 view-if: z_party_leader = "Joos"
