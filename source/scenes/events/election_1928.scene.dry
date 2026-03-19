@@ -302,7 +302,7 @@ There are some potential coalition arrangements.
 - @right_coalition
 - @spd_majority
 - @new_grand_coalition
-- @far_right_coalition
+#- @far_right_coalition
 - @no_majority
 - @brauns_dilemma
 - @left_front
@@ -367,9 +367,9 @@ President Braun faces a dilemma. Is it "democratic" to let democracy be destroye
 
 Alternatively, Braun could use the emergency powers of the presidency. Article 48 has been used by Hindenburg to promulgate anti-democratic and anti-worker policies; can Article 48 be used for good as well as evil?
 
-- @emergency_braun: We will form an emergency government with Braun's support.
+#- @emergency_braun: We will form an emergency government with Braun's support.
 - @new_elections: We will have new elections.
-- @far_right_win: Let the Nazis form their government.
+#- @far_right_win: Let the Nazis form their government.
 
 
 @left_front
@@ -627,7 +627,7 @@ President Braun faces a dilemma. He desperately desires a socialist or at least 
 - @new_elections: We will have new elections.
 - @left_front
 - @popular_front_coalition
-- @far_right_coalition
+#- @far_right_coalition
 
 
 
