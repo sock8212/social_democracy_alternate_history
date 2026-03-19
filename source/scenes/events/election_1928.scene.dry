@@ -807,9 +807,12 @@ The people's faith in democracy is shaken by this ordeal. Of course, the Nazis a
 
 We can pick from any number of ministries. Controlling a ministry allows us to directly effect policy in that area.
 
+- #mins_1928
+- #drop_mins_1928
+
 @labor
 title: Labor Ministry
-subtitle: The labour ministry controls the government's policies towards labour.
+subtitle: The labor ministry controls the government's policies towards labor.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
@@ -817,7 +820,7 @@ view-if: labor_minister_party != "Z"
 on-arrival: leverage -= 5; labor_minister_party = "Z"; labor_minister = "Stegerwald"
 go-to: ministries
 
-Adam Stegerwald has been appointed labour minister.
+Adam Stegerwald has been appointed labor minister.
 
 @interior
 title: Interior Ministry
