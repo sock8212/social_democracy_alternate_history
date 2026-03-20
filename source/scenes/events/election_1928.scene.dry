@@ -95,7 +95,7 @@ if (Q.dnvp_r >= Q.spd_r && Q.dnvp_r >= Q.uspd_r && Q.dnvp_r >= Q.z_r) {
 }
 
 if (Q.uspd_r >= Q.spd_r && Q.uspd_r >= Q.dnvp_r && Q.uspd_r >= Q.z_r) {
-    Q.largest_party = 'SVD';
+    Q.largest_party = 'USPD';
 }
 
 if (Q.z_r >= Q.spd_r && Q.z_r >= Q.uspd_r && Q.z_r >= Q.dnvp_r) {
@@ -139,9 +139,9 @@ Q.in_minority_government = 0;
 Q.in_unity_government = 0;
 Q.spd_toleration = 0;
 Q.foreign_minister_party = 'RDP';
-Q.interior_minister_party = 'SVD';
+Q.interior_minister_party = 'USPD';
 Q.justice_minister_party = 'LVP';
-Q.labor_minister_party = 'SVD';
+Q.labor_minister_party = 'USPD';
 Q.reichswehr_minister_party = 'I';
 Q.economic_minister_party = 'LVP';
 Q.finance_minister_party = 'Z';
