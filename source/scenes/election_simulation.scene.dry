@@ -18,12 +18,12 @@ Q.unemployed = 4.2;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'svd', 'rdp', 'lvp', 'z', 'dnvp', 'nsfb', 'other'];
+Q.parties = ['spd', 'uspd', 'rdp', 'lvp', 'z', 'dnvp', 'nsfb', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_spd = 54; 
-Q.workers_svd = 22;
+Q.workers_uspd = 22;
 Q.workers_rdp = 4;
 Q.workers_lvp = 3;
 Q.workers_z = 7;
@@ -32,7 +32,7 @@ Q.workers_nsfb = 2;
 Q.workers_other = 2;
 
 Q.old_middle_spd = 3;
-Q.old_middle_svd = 1;
+Q.old_middle_uspd = 1;
 Q.old_middle_rdp = 5;
 Q.old_middle_lvp = 40;
 Q.old_middle_z = 10;
@@ -41,7 +41,7 @@ Q.old_middle_nsfb = 4;
 Q.old_middle_other = 6;
 
 Q.new_middle_spd = 8;
-Q.new_middle_svd = 5;
+Q.new_middle_uspd = 5;
 Q.new_middle_rdp = 24;
 Q.new_middle_lvp = 35;
 Q.new_middle_z = 5;
@@ -50,7 +50,7 @@ Q.new_middle_nsfb = 4;
 Q.new_middle_other = 2;
 
 Q.rural_spd = 17;
-Q.rural_svd = 13;
+Q.rural_uspd = 13;
 Q.rural_rdp = 2;
 Q.rural_lvp = 15;
 Q.rural_z = 10;
@@ -59,7 +59,7 @@ Q.rural_nsfb = 5;
 Q.rural_other = 4;
 
 Q.unemployed_spd = 55;
-Q.unemployed_svd = 20;
+Q.unemployed_uspd = 20;
 Q.unemployed_rdp = 2;
 Q.unemployed_lvp = 1;
 Q.unemployed_z = 4;
@@ -68,7 +68,7 @@ Q.unemployed_nsfb = 10;
 Q.unemployed_other = 4;
 
 Q.catholics_spd = 13;
-Q.catholics_svd = 15;
+Q.catholics_uspd = 15;
 Q.catholics_rdp = 1;
 Q.catholics_lvp = 7;
 Q.catholics_z = 46;
@@ -101,12 +101,12 @@ Q.unemployed = 20;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'svd', 'rdp', 'lvp', 'z', 'dnvp', 'nsfb', 'other'];
+Q.parties = ['spd', 'uspd', 'rdp', 'lvp', 'z', 'dnvp', 'nsfb', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_spd = 56; 
-Q.workers_svd = 22;
+Q.workers_uspd = 22;
 Q.workers_rdp = 4;
 Q.workers_lvp = 2;
 Q.workers_z = 6;
@@ -115,7 +115,7 @@ Q.workers_nsfb = 2;
 Q.workers_other = 2;
 
 Q.old_middle_spd = 3;
-Q.old_middle_svd = 1;
+Q.old_middle_uspd = 1;
 Q.old_middle_rdp = 5;
 Q.old_middle_lvp = 40;
 Q.old_middle_z = 10;
@@ -124,7 +124,7 @@ Q.old_middle_nsfb = 4;
 Q.old_middle_other = 6;
 
 Q.new_middle_spd = 8;
-Q.new_middle_svd = 5;
+Q.new_middle_uspd = 5;
 Q.new_middle_rdp = 24;
 Q.new_middle_lvp = 35;
 Q.new_middle_z = 5;
@@ -133,7 +133,7 @@ Q.new_middle_nsfb = 4;
 Q.new_middle_other = 2;
 
 Q.rural_spd = 19;
-Q.rural_svd = 13;
+Q.rural_uspd = 13;
 Q.rural_rdp = 2;
 Q.rural_lvp = 17;
 Q.rural_z = 10;
@@ -142,7 +142,7 @@ Q.rural_nsfb = 5;
 Q.rural_other = 4;
 
 Q.unemployed_spd = 55;
-Q.unemployed_svd = 20;
+Q.unemployed_uspd = 20;
 Q.unemployed_rdp = 2;
 Q.unemployed_lvp = 1;
 Q.unemployed_z = 4;
@@ -151,7 +151,7 @@ Q.unemployed_nsfb = 10;
 Q.unemployed_other = 4;
 
 Q.catholics_spd = 13;
-Q.catholics_svd = 15;
+Q.catholics_uspd = 15;
 Q.catholics_rdp = 1;
 Q.catholics_lvp = 7;
 Q.catholics_z = 46;

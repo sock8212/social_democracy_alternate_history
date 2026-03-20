@@ -96,7 +96,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 [? if uspd_ideology != 0: <span class="tooltip-text" title="German National People's Party" style="color: #598dca;">**DNVP**</span>: [? if dnvp_ideology = "Left": Popular Conservatism?][? if dnvp_ideology = "Centre": National Conservatism ?][? if dnvp_ideology = "Right": Authoritarian Conservatism ?] ([+ dnvp_leader +])?]
 
-[? if uspd_ideology != 0: <span class="tooltip-text" title="National Socialist Freedom Bloc" style="color: #7a3c00;">**NSFB**</span>: [? if nsfb_ideology = "Pragmatic": Völkisch nationalism?][? if nsfb_ideology = "Radical": National Socialism ?] ([+ nsfb_leader +])?]
+[? if uspd_ideology != 0: <span class="tooltip-text" title="National Socialist Freedom Bloc" style="color: #7a3c00;">**NSFB**</span>: [? if nsfb_ideology = "Pragmatic": Völkisch Nationalism?][? if nsfb_ideology = "Radical": National Socialism ?] ([+ nsfb_leader +])?]
 
 = Internal Factions of <span style="color: #000;">**Zentrum**</span>:
 
