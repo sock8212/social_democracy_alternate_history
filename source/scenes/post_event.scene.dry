@@ -81,7 +81,7 @@ var total_strength = Q.left_strength + Q.center_strength + Q.labor_strength + Q.
 // normalize strength for the different factions
 Q.left_strength = 100*Q.left_strength/total_strength;
 Q.center_strength = 100*Q.center_strength/total_strength;
-Q.labor_strength = 100*Q.labor_strength/total_strength;
+Q.labour_strength = 100*Q.labour_strength/total_strength;
 Q.clerical_strength = 100*Q.clerical_strength/total_strength;
 
 var total_dissent = Q.left_strength*Q.left_dissent + Q.center_strength*Q.center_dissent + Q.labor_strength*Q.labor_dissent + Q.clerical_strength*Q.clerical_dissent;
