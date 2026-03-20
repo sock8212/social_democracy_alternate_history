@@ -105,21 +105,21 @@ Q.moderate_plan_adopted = 0;
 // inter-party relations, top out of date
 
 Q.spd_relation = 32;
-Q.svd_relation = 48;
+Q.uspd_relation = 48;
 Q.rdp_relation = 38;
 Q.lvp_relation = 63;
 Q.dnvp_relation = 39;
 Q.nsfb_relation = 0;
 
 Q.spd_leader = "Dittmann";
-Q.svd_leader = "Wels";
+Q.uspd_leader = "Wels";
 Q.rdp_leader = "Erkelenz";
 Q.lv_leader = "Kahl";
 Q.dnvp_leader = "Hergt";
 Q.nsfb_leader = "Graefe";
 
 Q.spd_ideology = "Right";
-Q.svd_ideology = "Centre";
+Q.uspd_ideology = "Centre";
 Q.rdp_ideology = "Right";
 Q.lv_ideology = "Centre";
 Q.dnvp_ideology = "Left";
@@ -311,7 +311,7 @@ Q.catholics_other = 2;
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
 Q.spd_r = 24.2;
-Q.svd_r = 18.3;
+Q.uspd_r = 18.3;
 Q.rdp_r = 4.8;
 Q.lvp_r = 15.1;
 Q.z_r = 18.4;
@@ -321,7 +321,7 @@ Q.other_r = 4.2;
 
 // diff from prev
 Q.old_spd_r = 24.2;
-Q.old_svd_r = 18.3;
+Q.old_uspd_r = 18.3;
 Q.old_rdp_r = 4.8;
 Q.old_lvp_r = 15.1;
 Q.old_z_r = 18.4;
@@ -351,7 +351,7 @@ Q.president_party = 'LVP';
 Q.chancellor = "Marx";
 Q.chancellor_party = 'Z';
 Q.spd_in_government = 0;
-Q.svd_in_government = 1;
+Q.uspd_in_government = 1;
 Q.rdp_in_government = 1;
 Q.lvp_in_government = 1;
 Q.z_in_government = 1;
@@ -359,17 +359,17 @@ Q.dnvp_in_government = 0;
 Q.nsfb_in_government = 0;
 
 Q.spd_dissent = 0;
-Q.svd_dissent = 2;
+Q.uspd_dissent = 2;
 Q.rdp_dissent = 2;
 Q.lvp_dissent = 1;
 Q.dnvp_dissent = 0;
 Q.nsfb_dissent = 0;
 
-// Popular Front = SPD + SVD + RDP + Z
+// Popular Front = SPD + USPD + RDP + Z
 Q.in_popular_front = 0;
-// Weimar coalition = SVD + RDP + Z, often with SPD toleration
+// Weimar coalition = USPD + RDP + Z, often with SPD toleration
 Q.in_weimar_coalition = 0;
-// Grand coalition = SVD + RDP + LVP + Z
+// Grand coalition = USPD + RDP + LVP + Z
 Q.in_grand_coalition = 1;
 // Bourgeois coalition = RDP + LVP + Z + Others
 Q.in_bourgeois_coalition = 0;
@@ -377,7 +377,7 @@ Q.in_bourgeois_coalition = 0;
 Q.in_centre_right_coalition = 0;
 // Left Front = SPD + SVD
 Q.in_left_front = 0;
-// United Front = SPD + SVD + RDP
+// United Front = SPD + USPD + RDP
 Q.in_united_front = 0;
 // emergency government containing the SPD: only president Braun can do this.
 Q.in_emergency_government = 0;

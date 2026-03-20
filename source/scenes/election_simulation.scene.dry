@@ -77,7 +77,7 @@ Q.catholics_nsfb = 1;
 Q.catholics_other = 2;
 
 Q.spd_r = 25;
-Q.svd_r = 10;
+Q.uspd_r = 10;
 Q.rdp_r = 15;
 Q.lvp_r = 10;
 Q.z_r = 10;
@@ -160,7 +160,7 @@ Q.catholics_nsfb = 1;
 Q.catholics_other = 2;
 
 Q.spd_r = 25;
-Q.svd_r = 10;
+Q.uspd_r = 10;
 Q.rdp_r = 15;
 Q.lvp_r = 10;
 Q.z_r = 10;

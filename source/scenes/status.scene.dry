@@ -24,7 +24,7 @@ Resources available: [+ resources +]
 
 [? if spd_in_government : <span style="color: #ac2639;">**SPD**</span> dissent: [+ spd_dissent : coalition_dissent +] ?]
 
-[? if svd_in_government : <span style="color: #db7097;">**SVD**</span> dissent: [+ svd_dissent : coalition_dissent +] ?]
+[? if uspd_in_government : <span style="color: #db7097;">**SVD**</span> dissent: [+ uspd_dissent : coalition_dissent +] ?]
 
 [? if rdp_in_government : <span style="color: #c66cda;">**RDP**</span> dissent: [+ rdp_dissent : coalition_dissent +] ?]
 
@@ -45,7 +45,7 @@ Chancellor: [? if chancellor == "Marx": <span class="tooltip-text" title="Wilhel
 Reichstag composition:
 
 <span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #ac2639;">**SPD**</span>: [+ spd_r +]%
-<span class="tooltip-text" title="Socialist People's Party" style="color: #db7097;">**SVD**</span>: [+ svd_r +]%
+<span class="tooltip-text" title="Socialist People's Party" style="color: #db7097;">**SVD**</span>: [+ uspd_r +]%
 <span class="tooltip-text" title="Radical Democratic Party" style="color: #c66cda;">**RDP**</span>: [+ rdp_r +]%
 <span class="tooltip-text" title="United Liberal Party" style="color: #d9c640;">**LVP**</span>: [+ lvp_r+]%
 <span class="tooltip-text" title="Centre Party + Bavarian People's Party" style="color: #000;">**Z + BVP**</span>: [+ z_r +]%
@@ -74,7 +74,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 <span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #ac2639;">**SPD**</span>: [+ spd_relation : relationships +]
 
-<span class="tooltip-text" title="Socialist People's Party" style="color: #db7097;">**SVD**</span>: [+ svd_relation : relationships +]
+<span class="tooltip-text" title="Socialist People's Party" style="color: #db7097;">**SVD**</span>: [+ uspd_relation : relationships +]
 
 <span class="tooltip-text" title="Radical Democratic Party" style="color: #c66cda;">**RDP**</span>: [+ rdp_relation : relationships +]
 
@@ -86,17 +86,17 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Party Leadership
 
-[? if svd_ideology != 0: <span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #ac2639;">**SPD**</span>: [? if spd_ideology = "Left": Luxemburgism?][? if spd_ideology = "Centre": Revolutionary Marxism ?][? if spd_ideology = "Right": Centrist Marxism ?] ([+ spd_leader +])?]
+[? if uspd_ideology != 0: <span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #ac2639;">**SPD**</span>: [? if spd_ideology = "Left": Luxemburgism?][? if spd_ideology = "Centre": Revolutionary Marxism ?][? if spd_ideology = "Right": Centrist Marxism ?] ([+ spd_leader +])?]
 
-[? if svd_ideology != 0: <span class="tooltip-text" title="Socialist People's Party" style="color: #db7097;">**SVD**</span>: [? if svd_ideology = "Left": Left-Reformist Socialism?][? if svd_ideology = "Centre": Reformist Socialism ?][? if svd_ideology = "Right": Revisionist Socialism ?] ([+ svd_leader +])?]
+[? if uspd_ideology != 0: <span class="tooltip-text" title="Socialist People's Party" style="color: #db7097;">**SVD**</span>: [? if uspd_ideology = "Left": Left-Reformist Socialism?][? if uspd_ideology = "Centre": Reformist Socialism ?][? if uspd_ideology = "Right": Revisionist Socialism ?] ([+ uspd_leader +])?]
 
-[? if svd_ideology != 0: <span class="tooltip-text" title="Radical Democratic Party" style="color: #c66cda;">**RDP**</span>: [? if rdp_ideology = "Left": Radical Liberalism?][? if rdp_ideology = "Right": Progressive Liberalism ?] ([+ rdp_leader +])?]
+[? if uspd_ideology != 0: <span class="tooltip-text" title="Radical Democratic Party" style="color: #c66cda;">**RDP**</span>: [? if rdp_ideology = "Left": Radical Liberalism?][? if rdp_ideology = "Right": Progressive Liberalism ?] ([+ rdp_leader +])?]
 
-[? if svd_ideology != 0: <span class="tooltip-text" title="United Liberal Party" style="color: #d9c640;">**LVP**</span>: [? if lv_ideology = "Left": Big-tent Liberalism?][? if lv_ideology = "Centre": Classical Liberalism ?][? if lv_ideology = "Right": National Liberalism ?] ([+ lv_leader +])?]
+[? if uspd_ideology != 0: <span class="tooltip-text" title="United Liberal Party" style="color: #d9c640;">**LVP**</span>: [? if lv_ideology = "Left": Big-tent Liberalism?][? if lv_ideology = "Centre": Classical Liberalism ?][? if lv_ideology = "Right": National Liberalism ?] ([+ lv_leader +])?]
 
-[? if svd_ideology != 0: <span class="tooltip-text" title="German National People's Party" style="color: #598dca;">**DNVP**</span>: [? if dnvp_ideology = "Left": Popular Conservatism?][? if dnvp_ideology = "Centre": National Conservatism ?][? if dnvp_ideology = "Right": Authoritarian Conservatism ?] ([+ dnvp_leader +])?]
+[? if uspd_ideology != 0: <span class="tooltip-text" title="German National People's Party" style="color: #598dca;">**DNVP**</span>: [? if dnvp_ideology = "Left": Popular Conservatism?][? if dnvp_ideology = "Centre": National Conservatism ?][? if dnvp_ideology = "Right": Authoritarian Conservatism ?] ([+ dnvp_leader +])?]
 
-[? if svd_ideology != 0: <span class="tooltip-text" title="National Socialist Freedom Bloc" style="color: #7a3c00;">**NSFB**</span>: [? if nsfb_ideology = "Pragmatic": Völkisch nationalism?][? if nsfb_ideology = "Radical": National Socialism ?] ([+ nsfb_leader +])?]
+[? if uspd_ideology != 0: <span class="tooltip-text" title="National Socialist Freedom Bloc" style="color: #7a3c00;">**NSFB**</span>: [? if nsfb_ideology = "Pragmatic": Völkisch nationalism?][? if nsfb_ideology = "Radical": National Socialism ?] ([+ nsfb_leader +])?]
 
 = Internal Factions of <span style="color: #000;">**Zentrum**</span>:
 
@@ -170,7 +170,7 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 <span style="color: #ac2639;">**SPD**</span>: [+ spd_votes +]%
 
-<span style="color: #db7097;">**SVD**</span>: [+ svd_votes +]%
+<span style="color: #db7097;">**SVD**</span>: [+ uspd_votes +]%
 
 <span style="color: #c66cda;">**RDP**</span>: [+ rdp_votes +]%
 
@@ -190,16 +190,16 @@ Support for <span class="tooltip-text" title="Nationalism, although weakened by 
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_spd_display +]%, SVD: [+ workers_svd_display +]%, RDP: [+ workers_rdp_display +]%, LVP: [+ workers_lvp_display +]%, Z: [+ workers_z_display +]%; DNVP: [+ workers_dnvp_display +]%, NSFB: [+ workers_nsfb_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: SPD: [+ workers_spd_display +]%, SVD: [+ workers_uspd_display +]%, RDP: [+ workers_rdp_display +]%, LVP: [+ workers_lvp_display +]%, Z: [+ workers_z_display +]%; DNVP: [+ workers_dnvp_display +]%, NSFB: [+ workers_nsfb_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
 
-New Middle Class: SPD: [+ new_middle_spd_display +]%, SVD: [+ new_middle_svd_display +]%, RDP: [+ new_middle_rdp_display +]%, LVP: [+ new_middle_lvp_display +]%, Z: [+ new_middle_z_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSFB: [+ new_middle_nsfb_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+New Middle Class: SPD: [+ new_middle_spd_display +]%, SVD: [+ new_middle_uspd_display +]%, RDP: [+ new_middle_rdp_display +]%, LVP: [+ new_middle_lvp_display +]%, Z: [+ new_middle_z_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSFB: [+ new_middle_nsfb_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
 
-Old Middle Class: SPD: [+ old_middle_spd_display +]%, SVD: [+ old_middle_svd_display +]%, RDP: [+ old_middle_rdp_display +]%, LVP: [+ old_middle_lvp_display +]%, Z: [+ old_middle_z_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSFB: [+ old_middle_nsfb_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: SPD: [+ old_middle_spd_display +]%, SVD: [+ old_middle_uspd_display +]%, RDP: [+ old_middle_rdp_display +]%, LVP: [+ old_middle_lvp_display +]%, Z: [+ old_middle_z_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSFB: [+ old_middle_nsfb_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
-Rural: SPD: [+ rural_spd_display +]%, SVD: [+ rural_svd_display +]%, RDP: [+ rural_rdp_display +]%, LVP: [+ rural_lvp_display +]%: [+ rural_ddp_display +]%, Z: [+ rural_z_display +]%; DNVP: [+ rural_dnvp_display +]%, NSFB: [+ rural_nsfb_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: SPD: [+ rural_spd_display +]%, SVD: [+ rural_uspd_display +]%, RDP: [+ rural_rdp_display +]%, LVP: [+ rural_lvp_display +]%: [+ rural_ddp_display +]%, Z: [+ rural_z_display +]%; DNVP: [+ rural_dnvp_display +]%, NSFB: [+ rural_nsfb_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
 
-Unemployed: SPD: [+ unemployed_spd_display +]%, SVD: [+ unemployed_svd_display +]%, RDP: [+ unemployed_rdp_display +]%, LVP: [+ unemployed_lvp_display +]%, Z: [+ unemployed_z_display +]%; DNVP: [+ unemployed_dnvp_display +]%, NSFB: [+ unemployed_nsfb_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: SPD: [+ unemployed_spd_display +]%, SVD: [+ unemployed_uspd_display +]%, RDP: [+ unemployed_rdp_display +]%, LVP: [+ unemployed_lvp_display +]%, Z: [+ unemployed_z_display +]%; DNVP: [+ unemployed_dnvp_display +]%, NSFB: [+ unemployed_nsfb_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
 
-Catholics: SPD: [+ catholics_spd_display +]%, SVD: [+ catholics_svd_display +]%, RDP: [+ catholics_rdp_display +]%, LVP: [+ catholics_LV_display +]%, Z: [+ catholics_z_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSFB: [+ catholics_nsfb_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Catholics: SPD: [+ catholics_spd_display +]%, SVD: [+ catholics_uspd_display +]%, RDP: [+ catholics_rdp_display +]%, LVP: [+ catholics_LV_display +]%, Z: [+ catholics_z_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSFB: [+ catholics_nsfb_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
 

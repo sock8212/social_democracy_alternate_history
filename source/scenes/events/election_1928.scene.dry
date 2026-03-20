@@ -90,37 +90,37 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 
 // The largest party
 Q.largest_party = 'SPD';
-if (Q.dnvp_r >= Q.spd_r && Q.dnvp_r >= Q.svd_r && Q.dnvp_r >= Q.z_r) {
+if (Q.dnvp_r >= Q.spd_r && Q.dnvp_r >= Q.uspd_r && Q.dnvp_r >= Q.z_r) {
     Q.largest_party = 'DNVP';
 }
 
-if (Q.svd_r >= Q.spd_r && Q.svd_r >= Q.dnvp_r && Q.svd_r >= Q.z_r) {
+if (Q.uspd_r >= Q.spd_r && Q.uspd_r >= Q.dnvp_r && Q.uspd_r >= Q.z_r) {
     Q.largest_party = 'SVD';
 }
 
-if (Q.z_r >= Q.spd_r && Q.z_r >= Q.svd_r && Q.z_r >= Q.dnvp_r) {
+if (Q.z_r >= Q.spd_r && Q.z_r >= Q.uspd_r && Q.z_r >= Q.dnvp_r) {
     Q.largest_party = 'Z';
 }
 
 // coalitions
-Q.weimar_coalition = parseFloat((Q.svd_r + Q.rdp_r + Q.z_r).toFixed(1));
-Q.grand_coalition = parseFloat((Q.svd_r + Q.rdp_r + Q.z_r + Q.lvp_r).toFixed(1));
+Q.weimar_coalition = parseFloat((Q.uspd_r + Q.rdp_r + Q.z_r).toFixed(1));
+Q.grand_coalition = parseFloat((Q.uspd_r + Q.rdp_r + Q.z_r + Q.lvp_r).toFixed(1));
 Q.bourgeois_coalition = parseFloat((Q.rdp_r + Q.z_r + Q.lvp_r + Q.other_r).toFixed(1));
 Q.center_right_coalition = parseFloat((Q.z_r + Q.lvp_r + Q.other_r + Q.dnvp_r).toFixed(1));
 Q.right_coalition = parseFloat((Q.z_r + Q.other_r + Q.dnvp_r + Q.nsfb_r).toFixed(1));
 Q.far_right_coalition = parseFloat((Q.dnvp_r + Q.nsfb_r).toFixed(1));
-Q.left_front = parseFloat((Q.spd_r + Q.svd_r).toFixed(1));
+Q.left_front = parseFloat((Q.spd_r + Q.uspd_r).toFixed(1));
 // i'm wirthing it. 
-Q.popular_front_coalition = parseFloat((Q.spd_r + Q.svd_r + Q.rdp_r + Q.z_r - 3).toFixed(1));
+Q.popular_front_coalition = parseFloat((Q.spd_r + Q.uspd_r + Q.rdp_r + Q.z_r - 3).toFixed(1));
 // canon ending???
-Q.united_front_coalition = parseFloat((Q.spd_r + Q.svd_r + Q.rdp_r).toFixed(1));
+Q.united_front_coalition = parseFloat((Q.spd_r + Q.uspd_r + Q.rdp_r).toFixed(1));
 
 Q.leverage = Q.z_r;
 
 Q.grand_coalition_failed = 0;
 // Reset government and ministers... Based on Brüning's 1930 govt
 Q.spd_in_government = 0;
-Q.svd_in_government = 0;
+Q.uspd_in_government = 0;
 Q.rdp_in_government = 0;
 Q.lvp_in_government = 0;
 Q.z_in_government = 0;
@@ -182,10 +182,10 @@ if (Q.sapd_formed && Q.sapd_r) {
 }
 data = data.concat([
     {
-        "id": "svd",
-        "legend": "SVD",
-        "name": "SVD",
-        "seats": Math.round(Q.svd_r*5),
+        "id": "uspd",
+        "legend": "USPD",
+        "name": "USPD",
+        "seats": Math.round(Q.uspd_r*5),
     },
     {
         "id": "rdp",
@@ -261,7 +261,7 @@ go-to: coalition_menu
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +]% {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#db7097'> </div> !} SVD: {!</td><td>!} [+ svd_r +]% {!</td><td>!} [+ str_change_svd +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#db7097'> </div> !} SVD: {!</td><td>!} [+ uspd_r +]% {!</td><td>!} [+ str_change_svd +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#c66cda'> </div> !} RDP: {!</td><td>!} [+ rdp_r +]% {!</td><td>!} [+ str_change_rdp +]% {!</td></tr>!}
 
@@ -278,13 +278,13 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-Weimar Coalition (SVD + RDP + Z + BVP): [+ weimar_coalition +]%
+Weimar Coalition (USPD + RDP + Z + BVP): [+ weimar_coalition +]%
 
-Grand Coalition (SVD + RDP + LVP + Z + BVP): [+ grand_coalition +]%
+Grand Coalition (USPD + RDP + LVP + Z + BVP): [+ grand_coalition +]%
 
 Left Front (SPD + SVD): [+ left_front +]%
 
-United Front (SPD + SVD + RDP): [+ united_front_coalition +]%
+United Front (SPD + USPD + RDP): [+ united_front_coalition +]%
 
 Centre-right Coalition (LVP + Z + BVP + DVP + Others + DNVP): [+ center_right_coalition +]%
 
@@ -313,8 +313,8 @@ There are some potential coalition arrangements.
 
 @popular_front_coalition
 title: A new "Popular Front" coalition?
-subtitle: SPD + SVD + RDP + Z ([+ popular_front_coalition +]%)
-unavailable-subtitle: SPD + SVD + RDP + Z ([+ popular_front_coalition +]%) - [? if ((spd_relation < 65 and spd_ideology == "Centre") or (spd_relation < 45 and spd_ideology == "Right")): We do not have good enough relations with the SPD. ?][? if spd_ideology == "Left": The SPD is too radical to tame. ?][? if spd_coalition < 3 : The Social Democrats are unwilling to compromise at all. ?]
+subtitle: SPD + USPD + RDP + Z ([+ popular_front_coalition +]%)
+unavailable-subtitle: SPD + USPD + RDP + Z ([+ popular_front_coalition +]%) - [? if ((spd_relation < 65 and spd_ideology == "Centre") or (spd_relation < 45 and spd_ideology == "Right")): We do not have good enough relations with the SPD. ?][? if spd_ideology == "Left": The SPD is too radical to tame. ?][? if spd_coalition < 3 : The Social Democrats are unwilling to compromise at all. ?]
 view-if: popular_front_coalition >= 50
 choose-if: (((spd_relation >= 65 and spd_ideology == "Centre") or (spd_relation >= 45 and spd_ideology == "Right")) and (spd_ideology == "Centre" or spd_ideology == "Right") and spd_coalition >= 3)
 
@@ -326,12 +326,12 @@ The far-right might attempt a coup, if such a coalition were formed.
 - @coalition_menu: This is inadvisable. Try another governing arrangement.
 
 @great_popular_front
-on-arrival: spd_in_government = 1; svd_in_government = 1; rdp_in_government = 1; z_in_government = 1; in_popular_front = 1; chancellor = "Müller"; chancellor_party = "SVD"; spd_relation += 10; coup_progress += 2 if spd_ideology == "Centre"; in_left_front = 0; in_weimar_coalition = 0; in_grand_coalition = 0; spd_dissent = 1; svd_dissent = 0; rdp_dissent = 0;
+on-arrival: spd_in_government = 1; uspd_in_government = 1; rdp_in_government = 1; z_in_government = 1; in_popular_front = 1; chancellor = "Müller"; chancellor_party = "USPD"; spd_relation += 10; coup_progress += 2 if spd_ideology == "Centre"; in_left_front = 0; in_weimar_coalition = 0; in_grand_coalition = 0; spd_dissent = 1; uspd_dissent = 0; rdp_dissent = 0;
 
 achievement: grosse_volksfront
 go-to: popular_front_civil_war if coup_progress >= 10; popular_front_no_civil_war if coup_progress < 10
 
-Hermann Müller of the SVD is selected by the negotiating committee as Chancellor, 
+Hermann Müller of the USPD is selected by the negotiating committee as Chancellor. 
 
 @popular_front_success
 on-arrival: spd_in_government = 1; in_popular_front = 1; chancellor = "Breitscheid"; chancellor_party = "SPD"; kpd_relation += 10; coup_progress += 2; in_left_front = 0; in_weimar_coalition = 0; in_grand_coalition = 0; coalition_dissent = 0;
@@ -341,7 +341,7 @@ achievement: volksfront
 Somehow, surprisingly, the coalition is successfully formed! We still need a chancellor; the only acceptable choice among the parties was Rudolf Breitscheid of the SPD, acceptable to the Center and KPD [? if president == "Hindenburg" : as well as President Hindenburg, albeit extremely reluctantly ?].
 
 @popular_front_no_civil_war
-on-arrival: spd_goals_seen = 0; finance_minister_party = "SVD"; interior_minister_party = "Z"; economic_minister_party = "SPD"; labor_minister_party = "SPD"; foreign_minister_party = "RDP"; agriculture_minister_party = "SVD"; reichswehr_minister = "Z"; leverage = z_r;
+on-arrival: spd_goals_seen = 0; finance_minister_party = "USPD"; interior_minister_party = "Z"; economic_minister_party = "SPD"; labor_minister_party = "SPD"; foreign_minister_party = "RDP"; agriculture_minister_party = "USPD"; reichswehr_minister = "Z"; leverage = z_r;
 achievement: volksfront
 
 In response to the KPD's entrance into the government, the right-wing takes a "wait-and-see" approach for now. They expect that the Popular Front government will be unstable and incompetent, and will collapse of its own accord, discrediting the left and center and eventually enabling the destruction of the Weimar Republic. Our task is to prove them wrong.
@@ -352,7 +352,7 @@ The KPD has taken an abstentionist position with regards to ministries. They cla
 
 
 @popular_front_civil_war
-on-arrival: spd_relation = 80; svd_relation = 80; rdp_relation = 80; reichswehr_loyalty += 0.25;
+on-arrival: spd_relation = 80; uspd_relation = 80; rdp_relation = 80; reichswehr_loyalty += 0.25;
 
 In response to the SPD's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Stahlhelm and Nazi SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop us from taking power.
 
@@ -654,11 +654,11 @@ We have won the vote of no confidence, and are currently ruling under an SPD min
 
 @weimar_coalition
 title: We can form a Weimar Coalition.
-subtitle: SVD + RDP + Z + BVP ([+ weimar_coalition +]%)
-unavailable-subtitle: SPD + SVD + RDP + Z ([+ weimar_coalition +]%) - [? if ((svd_relation < 50 and svd_ideology == "Left") or (svd_relation < 40 and svd_ideology == "Centre") or (svd_relation < 35 and svd_ideology == "Right")): We do not have good enough relations with the SVD. ?][? if ((rdp_relation < 45 and rdp_ideology == "Left") or (rdp_relation < 35 and rdp_ideology == "Right")): We do not have good enough relations with the RDP. ?]
+subtitle: USPD + RDP + Z + BVP ([+ weimar_coalition +]%)
+unavailable-subtitle: SPD + USPD + RDP + Z ([+ weimar_coalition +]%) - [? if ((uspd_relation < 50 and uspd_ideology == "Left") or (uspd_relation < 40 and uspd_ideology == "Centre") or (uspd_relation < 35 and uspd_ideology == "Right")): We do not have good enough relations with the SVD. ?][? if ((rdp_relation < 45 and rdp_ideology == "Left") or (rdp_relation < 35 and rdp_ideology == "Right")): We do not have good enough relations with the RDP. ?]
 view_if: weimar_coalition >= 50
-choose-if: ((svd_relation >= 50 and svd_ideology == "Left") or (svd_relation >= 40 and svd_ideology == "Centre") or (svd_relation >= 35 and svd_ideology == "Right")) and ((rdp_relation >= 45 and rdp_ideology == "Left") or (rdp_relation >= 35 and rdp_ideology == "Right")) and left_front < 50 
-on-arrival: in_weimar_coalition = 1; svd_in_government = 1; rdp_in_government = 1; z_in_government = 1; in_popular_front = 0; in_centre_right_coalition = 0; in_left_front = 0; foreign_minister_party = "RDP"; interior_minister_party = "SVD"; justice_minister_party = "SVD"; labor_minister_party = "SVD"; reichswehr_minister_party = "I"; economic_minister_party = "SVD"; finance_minister_party = "SVD"; agriculture_minister_party = "SVD"; foreign_minister = "Rathenau"; interior_minister = "Abegg"; justice_minister = "Radbruch"; labor_minister = "Wissell"; reichswehr_minister = "Reinhardt"; economic_minister = "Wirth"; finance_minister = "Erzberger"; agriculture_minister = "Schmidt";
+choose-if: ((uspd_relation >= 50 and uspd_ideology == "Left") or (uspd_relation >= 40 and uspd_ideology == "Centre") or (uspd_relation >= 35 and uspd_ideology == "Right")) and ((rdp_relation >= 45 and rdp_ideology == "Left") or (rdp_relation >= 35 and rdp_ideology == "Right")) and left_front < 50 
+on-arrival: in_weimar_coalition = 1; uspd_in_government = 1; rdp_in_government = 1; z_in_government = 1; in_popular_front = 0; in_centre_right_coalition = 0; in_left_front = 0; foreign_minister_party = "RDP"; interior_minister_party = "USPD"; justice_minister_party = "USPD"; labor_minister_party = "USPD"; reichswehr_minister_party = "I"; economic_minister_party = "USPD"; finance_minister_party = "USPD"; agriculture_minister_party = "USPD"; foreign_minister = "Rathenau"; interior_minister = "Abegg"; justice_minister = "Radbruch"; labor_minister = "Wissell"; reichswehr_minister = "Reinhardt"; economic_minister = "Wirth"; finance_minister = "Erzberger"; agriculture_minister = "Schmidt";
 achievement: weimar_coalition
 
 We have enough votes to form a majority Weimar Coalition, consisting of us, the RDP, and the SVD.
@@ -672,7 +672,7 @@ Who should be the chancellor?
 @muller
 title: Hermann Müller for Chancellor
 subtitle: Müller is a widely respected member of the USPD. Perhaps granting them the chancellery may increase our leverage?
-on-arrival: chancellor = "Müller"; chancellor_party = "SVD"; svd_relation += 7; spd_relation += 3; leverage += 5; 
+on-arrival: chancellor = "Müller"; chancellor_party = "USPD"; uspd_relation += 7; spd_relation += 3; leverage += 5; 
 
 Hermann Müller of the USPD has been appointed chancellor. The Left is pleased at you offering an olive branch to them.
 
@@ -690,7 +690,7 @@ Wilhelm Marx has been appointed chancellor.
 @wirth
 title: Joseph Wirth for Chancellor
 subtitle: Wirth is a left-leaning member of Zentrum, widely respected among the left.
-on-arrival: chancellor = "Z"; svd_relation += 5; spd_relation += 2; dnvp_relation -= 4;
+on-arrival: chancellor = "Z"; uspd_relation += 5; spd_relation += 2; dnvp_relation -= 4;
 
 Joseph Wirth, a leader of our progressive wing, has been appointed chancellor. 
 
@@ -699,9 +699,9 @@ Joseph Wirth, a leader of our progressive wing, has been appointed chancellor.
 @grand_coalition
 title: We can form a Grand Coalition.
 view-if: grand_coalition >= 50 
-subtitle: SVD + RDP + LVP + Z + BVP ([+ grand_coalition +]%)
-unavailable_subtitle: [? if ((svd_relation < 45 and svd_ideology == "Left") or (svd_relation < 35 and svd_ideology == "Centre") or (svd_relation < 25 and svd_ideology == "Right")) : The SVD distrusts us too much. ?][? if ((rdp_relation >= 40 and rdp_ideology == "Left") or (rdp_relation >= 25 and rdp_ideology == "Right")) : The RDP distrusts us too much. ?]
-on-arrival: in_grand_coalition = 1; in_popular_front = 0; in_left_front = 0; in_united_front = 0; in_centre_right_coalition = 0; foreign_minister_party = "RDP"; interior_minister_party = "SVD"; justice_minister_party = "LVP"; labor_minister_party = "SVD"; reichswehr_minister_party = "I"; economic_minister_party = "SVD"; finance_minister_party = "LVP"; agriculture_minister_party = "LVP";
+subtitle: USPD + RDP + LVP + Z + BVP ([+ grand_coalition +]%)
+unavailable_subtitle: [? if ((uspd_relation < 45 and uspd_ideology == "Left") or (uspd_relation < 35 and uspd_ideology == "Centre") or (uspd_relation < 25 and uspd_ideology == "Right")) : The USPD distrusts us too much. ?][? if ((rdp_relation >= 40 and rdp_ideology == "Left") or (rdp_relation >= 25 and rdp_ideology == "Right")) : The RDP distrusts us too much. ?]
+on-arrival: in_grand_coalition = 1; in_popular_front = 0; in_left_front = 0; in_united_front = 0; in_centre_right_coalition = 0; foreign_minister_party = "RDP"; interior_minister_party = "USPD"; justice_minister_party = "LVP"; labor_minister_party = "USPD"; reichswehr_minister_party = "I"; economic_minister_party = "USPD"; finance_minister_party = "LVP"; agriculture_minister_party = "LVP";
 go-to: grand_coalition_menu
 
 @grand_coalition_menu
@@ -717,7 +717,7 @@ Who should be the chancellor?
 @muller_groko
 title: Hermann Müller for Chancellor
 subtitle: Müller is a widely respected member of the USPD. Perhaps granting them the chancellery may increase our leverage?
-on-arrival: chancellor = "Müller"; chancellor_party = "SVD"; svd_relation += 7; spd_relation += 3; leverage += 5; 
+on-arrival: chancellor = "Müller"; chancellor_party = "USPD"; uspd_relation += 7; spd_relation += 3; leverage += 5; 
 
 Hermann Müller of the USPD has been appointed chancellor. The Left is pleased at you offering an olive branch to them.
 
@@ -735,7 +735,7 @@ Wilhelm Marx has been appointed chancellor.
 @wirth_groko
 title: Joseph Wirth for Chancellor
 subtitle: Wirth is a left-leaning member of Zentrum, widely respected among the left.
-on-arrival: chancellor = "Wirth"; chancellor_party = "Z"; svd_relation += 5; spd_relation += 2; dnvp_relation -= 3;
+on-arrival: chancellor = "Wirth"; chancellor_party = "Z"; uspd_relation += 5; spd_relation += 2; dnvp_relation -= 3;
 
 Joseph Wirth, a leader of our progressive wing, has been appointed chancellor. 
 
@@ -902,8 +902,8 @@ subtitle: The Reichswehr ministry controls the armed forces.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 20 
-view-if: reichswehr_minister_party != "SPD"
-on-arrival: leverage -= 20; reichswehr_minister_party = "SPD"; reichswehr_minister = "Leber"
+view-if: reichswehr_minister_party != "Z"
+on-arrival: leverage -= 20; reichswehr_minister_party = "Z"; reichswehr_minister = "Leber"
 go-to: ministries
 
 Julius Leber of the SPD has been appointed Reichswehr Minister.
@@ -920,14 +920,14 @@ This coalition arrangement is tolerable to all.
 @drop_labor
 title: Drop the Labor Ministry.
 view-if: labor_minister_party = "Z"
-on-arrival: labor_minister_party = "SVD"; labor_minister = "Wissell"; leverage += 5;
+on-arrival: labor_minister_party = "USPD"; labor_minister = "Wissell"; leverage += 5;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_interior
 title: Drop the Interior Ministry.
 view-if: interior_minister_party = "Z"
-on-arrival: interior_minister_party = "SVD"; interior_minister = "Severing"; leverage += 5;
+on-arrival: interior_minister_party = "USPD"; interior_minister = "Severing"; leverage += 5;
 tags: drop_mins_1928
 go-to: ministries
 
