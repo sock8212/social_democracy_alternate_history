@@ -190,16 +190,16 @@ Support for <span class="tooltip-text" title="Nationalism, although weakened by 
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_spd_display +]%, SVD: [+ workers_uspd_display +]%, RDP: [+ workers_rdp_display +]%, LVP: [+ workers_lvp_display +]%, Z: [+ workers_z_display +]%; DNVP: [+ workers_dnvp_display +]%, NSFB: [+ workers_nsfb_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: SPD: [+ workers_spd_display +]%, USPD: [+ workers_uspd_display +]%, RDP: [+ workers_rdp_display +]%, LVP: [+ workers_lvp_display +]%, Z: [+ workers_z_display +]%; DNVP: [+ workers_dnvp_display +]%, NSFB: [+ workers_nsfb_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
 
-New Middle Class: SPD: [+ new_middle_spd_display +]%, SVD: [+ new_middle_uspd_display +]%, RDP: [+ new_middle_rdp_display +]%, LVP: [+ new_middle_lvp_display +]%, Z: [+ new_middle_z_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSFB: [+ new_middle_nsfb_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+New Middle Class: SPD: [+ new_middle_spd_display +]%, USPD: [+ new_middle_uspd_display +]%, RDP: [+ new_middle_rdp_display +]%, LVP: [+ new_middle_lvp_display +]%, Z: [+ new_middle_z_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSFB: [+ new_middle_nsfb_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
 
-Old Middle Class: SPD: [+ old_middle_spd_display +]%, SVD: [+ old_middle_uspd_display +]%, RDP: [+ old_middle_rdp_display +]%, LVP: [+ old_middle_lvp_display +]%, Z: [+ old_middle_z_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSFB: [+ old_middle_nsfb_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: SPD: [+ old_middle_spd_display +]%, USPD: [+ old_middle_uspd_display +]%, RDP: [+ old_middle_rdp_display +]%, LVP: [+ old_middle_lvp_display +]%, Z: [+ old_middle_z_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSFB: [+ old_middle_nsfb_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
-Rural: SPD: [+ rural_spd_display +]%, SVD: [+ rural_uspd_display +]%, RDP: [+ rural_rdp_display +]%, LVP: [+ rural_lvp_display +]%: [+ rural_ddp_display +]%, Z: [+ rural_z_display +]%; DNVP: [+ rural_dnvp_display +]%, NSFB: [+ rural_nsfb_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: SPD: [+ rural_spd_display +]%, USPD: [+ rural_uspd_display +]%, RDP: [+ rural_rdp_display +]%, LVP: [+ rural_lvp_display +]%: [+ rural_ddp_display +]%, Z: [+ rural_z_display +]%; DNVP: [+ rural_dnvp_display +]%, NSFB: [+ rural_nsfb_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
 
-Unemployed: SPD: [+ unemployed_spd_display +]%, SVD: [+ unemployed_uspd_display +]%, RDP: [+ unemployed_rdp_display +]%, LVP: [+ unemployed_lvp_display +]%, Z: [+ unemployed_z_display +]%; DNVP: [+ unemployed_dnvp_display +]%, NSFB: [+ unemployed_nsfb_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: SPD: [+ unemployed_spd_display +]%, USPD: [+ unemployed_uspd_display +]%, RDP: [+ unemployed_rdp_display +]%, LVP: [+ unemployed_lvp_display +]%, Z: [+ unemployed_z_display +]%; DNVP: [+ unemployed_dnvp_display +]%, NSFB: [+ unemployed_nsfb_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
 
-Catholics: SPD: [+ catholics_spd_display +]%, SVD: [+ catholics_uspd_display +]%, RDP: [+ catholics_rdp_display +]%, LVP: [+ catholics_LV_display +]%, Z: [+ catholics_z_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSFB: [+ catholics_nsfb_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Catholics: SPD: [+ catholics_spd_display +]%, USPD: [+ catholics_uspd_display +]%, RDP: [+ catholics_rdp_display +]%, LVP: [+ catholics_LV_display +]%, Z: [+ catholics_z_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSFB: [+ catholics_nsfb_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
 

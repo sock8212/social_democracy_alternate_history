@@ -261,7 +261,7 @@ go-to: coalition_menu
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +]% {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#db7097'> </div> !} SVD: {!</td><td>!} [+ uspd_r +]% {!</td><td>!} [+ str_change_uspd +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#db7097'> </div> !} USPD: {!</td><td>!} [+ uspd_r +]% {!</td><td>!} [+ str_change_uspd +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#c66cda'> </div> !} RDP: {!</td><td>!} [+ rdp_r +]% {!</td><td>!} [+ str_change_rdp +]% {!</td></tr>!}
 
