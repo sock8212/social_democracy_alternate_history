@@ -71,7 +71,7 @@ Chancellor: [+ chancellor +] ([+ chancellor_party +])
 Reichstag composition:
 
 <span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #ac2639;">**SPD**</span>: [+ spd_r +]%
-<span class="tooltip-text" title="Socialist People's Party" style="color: #db7097;">**SVD**</span>: [+ uspd_r +]%
+<span class="tooltip-text" title="Independent Social Democratic Party" style="color: #db7097;">**USPD**</span>: [+ uspd_r +]%
 <span class="tooltip-text" title="Radical Democratic Party" style="color: #c66cda;">**RDP**</span>: [+ rdp_r +]%
 <span class="tooltip-text" title="United Liberal Party" style="color: #d9c640;">**LVP**</span>: [+ lvp_r+]%
 <span class="tooltip-text" title="Centre Party + Bavarian People's Party" style="color: #000;">**Z + BVP**</span>: [+ z_r +]%
@@ -83,7 +83,7 @@ Reichstag composition:
 
 [? if spd_in_government : <span style="color: #ac2639;">**SPD**</span> dissent: [+ spd_dissent : coalition_dissent +] ?]
 
-[? if uspd_in_government : <span style="color: #db7097;">**SVD**</span> dissent: [+ uspd_dissent : coalition_dissent +] ?]
+[? if uspd_in_government : <span style="color: #db7097;">**USPD**</span> dissent: [+ uspd_dissent : coalition_dissent +] ?]
 
 [? if rdp_in_government : <span style="color: #c66cda;">**RDP**</span> dissent: [+ rdp_dissent : coalition_dissent +] ?]
 
@@ -160,7 +160,7 @@ go-to: menu
 
 <span style="color: #ac2639;">**SPD**</span>: [+ spd_votes +]%
 
-<span style="color: #db7097;">**SVD**</span>: [+ uspd_votes +]%
+<span style="color: #db7097;">**USPD**</span>: [+ uspd_votes +]%
 
 <span style="color: #c66cda;">**RDP**</span>: [+ rdp_votes +]%
 
@@ -201,7 +201,7 @@ go-to: menu
 
 Current relations: [+ spd_relation : relationships +]
 
-<span style="color: #db7097;">**SVD**</span> - *Sozialistische Volkspartei Deutschlands* (Socialist People's Party of Germany) - a moderate centre-left to left-wing socialist party, which seeks a reformist path towards socialism. They split from the SPD becuase of their support for war credits. We have often been in coalitions.
+<span style="color: #db7097;">**USPD**</span> - *Sozialistische Volkspartei Deutschlands* (Independent Social Democratic Party of Germany) - a moderate centre-left to left-wing socialist party, which seeks a reformist path towards socialism. They split from the SPD becuase of their support for war credits. We have often been in coalitions.
 
 Current relations: [+ uspd_relation : relationships +]
 

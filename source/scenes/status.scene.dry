@@ -24,7 +24,7 @@ Resources available: [+ resources +]
 
 [? if spd_in_government : <span style="color: #ac2639;">**SPD**</span> dissent: [+ spd_dissent : coalition_dissent +] ?]
 
-[? if uspd_in_government : <span style="color: #db7097;">**SVD**</span> dissent: [+ uspd_dissent : coalition_dissent +] ?]
+[? if uspd_in_government : <span style="color: #db7097;">**USPD**</span> dissent: [+ uspd_dissent : coalition_dissent +] ?]
 
 [? if rdp_in_government : <span style="color: #c66cda;">**RDP**</span> dissent: [+ rdp_dissent : coalition_dissent +] ?]
 
@@ -45,7 +45,7 @@ Chancellor: [? if chancellor == "Marx": <span class="tooltip-text" title="Wilhel
 Reichstag composition:
 
 <span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #ac2639;">**SPD**</span>: [+ spd_r +]%
-<span class="tooltip-text" title="Socialist People's Party" style="color: #db7097;">**SVD**</span>: [+ uspd_r +]%
+<span class="tooltip-text" title="Independent Social Democratic Party" style="color: #db7097;">**USPD**</span>: [+ uspd_r +]%
 <span class="tooltip-text" title="Radical Democratic Party" style="color: #c66cda;">**RDP**</span>: [+ rdp_r +]%
 <span class="tooltip-text" title="United Liberal Party" style="color: #d9c640;">**LVP**</span>: [+ lvp_r+]%
 <span class="tooltip-text" title="Centre Party + Bavarian People's Party" style="color: #000;">**Z + BVP**</span>: [+ z_r +]%
@@ -74,7 +74,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 <span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #ac2639;">**SPD**</span>: [+ spd_relation : relationships +]
 
-<span class="tooltip-text" title="Socialist People's Party" style="color: #db7097;">**SVD**</span>: [+ uspd_relation : relationships +]
+<span class="tooltip-text" title="Independent Social Democratic Party" style="color: #db7097;">**USPD**</span>: [+ uspd_relation : relationships +]
 
 <span class="tooltip-text" title="Radical Democratic Party" style="color: #c66cda;">**RDP**</span>: [+ rdp_relation : relationships +]
 
@@ -88,7 +88,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 [? if uspd_ideology != 0: <span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #ac2639;">**SPD**</span>: [? if spd_ideology = "Left": Luxemburgism?][? if spd_ideology = "Centre": Revolutionary Marxism ?][? if spd_ideology = "Right": Centrist Marxism ?] ([+ spd_leader +])?]
 
-[? if uspd_ideology != 0: <span class="tooltip-text" title="Socialist People's Party" style="color: #db7097;">**SVD**</span>: [? if uspd_ideology = "Left": Left-Reformist Socialism?][? if uspd_ideology = "Centre": Reformist Socialism ?][? if uspd_ideology = "Right": Revisionist Socialism ?] ([+ uspd_leader +])?]
+[? if uspd_ideology != 0: <span class="tooltip-text" title="Independent Social Democratic Party" style="color: #db7097;">**USPD**</span>: [? if uspd_ideology = "Left": Left-Revisionist Marxism?][? if uspd_ideology = "Centre": Revisionist Marxism ?][? if uspd_ideology = "Right": Revisionist Socialism ?] ([+ uspd_leader +])?]
 
 [? if uspd_ideology != 0: <span class="tooltip-text" title="Radical Democratic Party" style="color: #c66cda;">**RDP**</span>: [? if rdp_ideology = "Left": Radical Liberalism?][? if rdp_ideology = "Right": Progressive Liberalism ?] ([+ rdp_leader +])?]
 
@@ -170,7 +170,7 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 <span style="color: #ac2639;">**SPD**</span>: [+ spd_votes +]%
 
-<span style="color: #db7097;">**SVD**</span>: [+ uspd_votes +]%
+<span style="color: #db7097;">**USPD**</span>: [+ uspd_votes +]%
 
 <span style="color: #c66cda;">**RDP**</span>: [+ rdp_votes +]%
 
