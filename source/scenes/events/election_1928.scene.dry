@@ -282,7 +282,7 @@ Weimar Coalition (USPD + RDP + Z + BVP): [+ weimar_coalition +]%
 
 Grand Coalition (USPD + RDP + LVP + Z + BVP): [+ grand_coalition +]%
 
-Left Front (SPD + SVD): [+ left_front +]%
+Left Front (SPD + USPD): [+ left_front +]%
 
 United Front (SPD + USPD + RDP): [+ united_front_coalition +]%
 
@@ -655,13 +655,13 @@ We have won the vote of no confidence, and are currently ruling under an SPD min
 @weimar_coalition
 title: We can form a Weimar Coalition.
 subtitle: USPD + RDP + Z + BVP ([+ weimar_coalition +]%)
-unavailable-subtitle: SPD + USPD + RDP + Z ([+ weimar_coalition +]%) - [? if ((uspd_relation < 50 and uspd_ideology == "Left") or (uspd_relation < 40 and uspd_ideology == "Centre") or (uspd_relation < 35 and uspd_ideology == "Right")): We do not have good enough relations with the SVD. ?][? if ((rdp_relation < 45 and rdp_ideology == "Left") or (rdp_relation < 35 and rdp_ideology == "Right")): We do not have good enough relations with the RDP. ?]
+unavailable-subtitle: SPD + USPD + RDP + Z ([+ weimar_coalition +]%) - [? if ((uspd_relation < 50 and uspd_ideology == "Left") or (uspd_relation < 40 and uspd_ideology == "Centre") or (uspd_relation < 35 and uspd_ideology == "Right")): We do not have good enough relations with the USPD. ?][? if ((rdp_relation < 45 and rdp_ideology == "Left") or (rdp_relation < 35 and rdp_ideology == "Right")): We do not have good enough relations with the RDP. ?]
 view_if: weimar_coalition >= 50
 choose-if: ((uspd_relation >= 50 and uspd_ideology == "Left") or (uspd_relation >= 40 and uspd_ideology == "Centre") or (uspd_relation >= 35 and uspd_ideology == "Right")) and ((rdp_relation >= 45 and rdp_ideology == "Left") or (rdp_relation >= 35 and rdp_ideology == "Right")) and left_front < 50 
 on-arrival: in_weimar_coalition = 1; uspd_in_government = 1; rdp_in_government = 1; z_in_government = 1; in_popular_front = 0; in_centre_right_coalition = 0; in_left_front = 0; foreign_minister_party = "RDP"; interior_minister_party = "USPD"; justice_minister_party = "USPD"; labor_minister_party = "USPD"; reichswehr_minister_party = "I"; economic_minister_party = "USPD"; finance_minister_party = "USPD"; agriculture_minister_party = "USPD"; foreign_minister = "Rathenau"; interior_minister = "Abegg"; justice_minister = "Radbruch"; labor_minister = "Wissell"; reichswehr_minister = "Reinhardt"; economic_minister = "Wirth"; finance_minister = "Erzberger"; agriculture_minister = "Schmidt";
 achievement: weimar_coalition
 
-We have enough votes to form a majority Weimar Coalition, consisting of us, the RDP, and the SVD.
+We have enough votes to form a majority Weimar Coalition, consisting of us, the RDP, and the USPD.
 
 Who should be the chancellor?
 
