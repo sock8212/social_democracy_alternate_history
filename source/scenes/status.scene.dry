@@ -20,7 +20,7 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-<span style="color: #000000;">**Z**</span> position: [? if in_grand_coalition : <span style="color: #db7097;">Gra</span><span style="color: #c66cda;">nd </span><span style="color: #d9c640;">Coal</span><span style="color: #000;">ition</span> ?]
+<span style="color: #000000;">**Z**</span> position: [? if in_grand_coalition : <span style="color: #db7097;">Gra</span><span style="color: #c66cda;">nd </span><span style="color: #d9c640;">Coal</span><span style="color: #000;">ition</span> ?][? if in_centre_right_coalition : <span style="color: #d9c640;">Centre-</span><span style="color: #000;">right C</span><span style="color: #598dca;">oalition</span> ?]
 
 [? if spd_in_government : <span style="color: #ac2639;">**SPD**</span> dissent: [+ spd_dissent : coalition_dissent +] ?]
 
