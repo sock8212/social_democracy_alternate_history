@@ -278,11 +278,9 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-Weimar Coalition (<span style="color: #db7097;">**USPD**</span> + <span style="color: #c66cda;">**RDP**</span> + <span style="color: #000;">**Z**</span> + <span style="color: #69A2be;">**BVP**</span>
-): [+ weimar_coalition +]%
+Weimar Coalition (<span style="color: #db7097;">**USPD**</span> + <span style="color: #c66cda;">**RDP**</span> + <span style="color: #000;">**Z**</span> + <span style="color: #69A2be;">**BVP**</span>): [+ weimar_coalition +]%
 
-Grand Coalition (<span style="color: #db7097;">**USPD**</span> + <span style="color: #c66cda;">**RDP**</span> + <span style="color: #d9c640;">**LVP**</span> + <span style="color: #000;">**Z**</span> + <span style="color: #69A2be;">**BVP**</span>
-): [+ grand_coalition +]%
+Grand Coalition (<span style="color: #db7097;">**USPD**</span> + <span style="color: #c66cda;">**RDP**</span> + <span style="color: #d9c640;">**LVP**</span> + <span style="color: #000;">**Z**</span> + <span style="color: #69A2be;">**BVP**</span>): [+ grand_coalition +]%
 
 Left Front (<span style="color: #ac2639;">**SPD**</span> + <span style="color: #db7097;">**USPD**</span>): [+ left_front +]%
 
@@ -315,8 +313,8 @@ There are some potential coalition arrangements.
 
 @popular_front_coalition
 title: A new "Popular Front" coalition?
-subtitle: SPD + USPD + RDP + Z ([+ popular_front_coalition +]%)
-unavailable-subtitle: SPD + USPD + RDP + Z ([+ popular_front_coalition +]%) - [? if ((spd_relation < 65 and spd_ideology == "Centre") or (spd_relation < 45 and spd_ideology == "Right")): We do not have good enough relations with the SPD. ?][? if spd_ideology == "Left": The SPD is too radical to tame. ?][? if spd_coalition < 3 : The Social Democrats are unwilling to compromise at all. ?]
+subtitle: <span style="color: #ac2639;">**SPD**</span> + <span style="color: #db7097;">**USPD**</span> + <span style="color: #c66cda;">**RDP**</span> + <span style="color: #000;">**Z**</span> ([+ popular_front_coalition +]%)
+unavailable-subtitle: <span style="color: #ac2639;">**SPD**</span> + <span style="color: #db7097;">**USPD**</span> + <span style="color: #c66cda;">**RDP**</span> + <span style="color: #000;">**Z**</span> ([+ popular_front_coalition +]%) - [? if ((spd_relation < 65 and spd_ideology == "Centre") or (spd_relation < 45 and spd_ideology == "Right")): We do not have good enough relations with the SPD. ?][? if spd_ideology == "Left": The SPD is too radical to tame. ?][? if spd_coalition < 3 : The Social Democrats are unwilling to compromise at all. ?]
 view-if: popular_front_coalition >= 50
 choose-if: (((spd_relation >= 65 and spd_ideology == "Centre") or (spd_relation >= 45 and spd_ideology == "Right")) and (spd_ideology == "Centre" or spd_ideology == "Right") and spd_coalition >= 3)
 
@@ -461,8 +459,8 @@ In response to the KPD's entrance into the government, the right-wing immediatel
 
 @centre_right_coalition
 title: We can form a Centre-right Coalition.
-subtitle: LVP + Z + BVP + Others + DNVP ([+ centre_right_coalition +]%)
-unavailable-subtitle: LVP + Z + BVP + Others + DNVP ([+ centre_right_coalition +]%) - [? if ((lvp_relation < 45 and lvp_ideology == "Left") or (lvp_relation < 35 and lvp_ideology == "Centre") or (lvp_relation < 25 and lvp_ideology == "Right")): We do not have good enough relations with the LVP. ?][? if ((dnvp_relation < 35 and dnvp_ideology == "Left") or (dnvp_relation < 45 and dnvp_ideology == "Centre") or (dnvp_relation < 60 and dnvp_ideology == "Right")): We do not have good enough relations with the DNVP. ?][? if (left_strength*2 + center_strength >= clerical_strength + labour_strength): The party has not debased itself enough to work with Hugenberg. ?]
+subtitle: <span style="color: #d9c640;">**LVP**</span> + <span style="color: #000;">**Z**</span> + <span style="color: #69A2be;">**BVP**</span> + <span style="color: #909090;">**Others**</span> + <span style="color: #598dca;">**DNVP**</span> ([+ centre_right_coalition +]%)
+unavailable-subtitle: <span style="color: #d9c640;">**LVP**</span> + <span style="color: #000;">**Z**</span> + <span style="color: #69A2be;">**BVP**</span> + <span style="color: #909090;">**Others**</span> + <span style="color: #598dca;">**DNVP**</span> ([+ centre_right_coalition +]%) - [? if ((lvp_relation < 45 and lvp_ideology == "Left") or (lvp_relation < 35 and lvp_ideology == "Centre") or (lvp_relation < 25 and lvp_ideology == "Right")): We do not have good enough relations with the LVP. ?][? if ((dnvp_relation < 35 and dnvp_ideology == "Left") or (dnvp_relation < 45 and dnvp_ideology == "Centre") or (dnvp_relation < 60 and dnvp_ideology == "Right")): We do not have good enough relations with the DNVP. ?][? if (left_strength*2 + center_strength >= clerical_strength + labour_strength): The party has not debased itself enough to work with Hugenberg. ?]
 view_if: centre_right_coalition >= 50
 choose-if: ((lvp_relation >= 45 and lvp_ideology == "Left") or (lvp_relation >= 35 and lvp_ideology == "Centre") or (lvp_relation >= 25 and lvp_ideology == "Right")) and ((dnvp_relation >= 35 and dnvp_ideology == "Left") or (dnvp_relation >= 45 and dnvp_ideology == "Centre") or(dnvp_relation >= 60 and dnvp_ideology == "Right" and left_strength*2 + center_strength < clerical_strength + labour_strength)) 
 on-arrival: in_centre_right_coalition = 1; lvp_in_government = 1; z_in_government = 1; dnvp_in_government = 1; in_popular_front = 0; in_centre_right_coalition = 0; in_left_front = 0; foreign_minister_party = "LVP"; interior_minister_party = "DNVP"; justice_minister_party = "LVP"; labor_minister_party = "LVP"; reichswehr_minister_party = "I"; economic_minister_party = "LVP"; finance_minister_party = "DNVP"; agriculture_minister_party = "DNVP"; foreign_minister = "Curtius"; interior_minister = "vom Keudell"; justice_minister = "Kahl"; labor_minister = "Thiel"; reichswehr_minister = "Reinhardt"; economic_minister = "von Raumer"; finance_minister = "von Schlieben"; agriculture_minister = "Schiele";
@@ -702,8 +700,8 @@ Joseph Wirth, a leader of our progressive wing, has been appointed chancellor.
 @grand_coalition
 title: We can form a Grand Coalition.
 view-if: grand_coalition >= 50 
-subtitle: USPD + RDP + LVP + Z + BVP ([+ grand_coalition +]%)
-unavailable_subtitle: [? if ((uspd_relation < 45 and uspd_ideology == "Left") or (uspd_relation < 35 and uspd_ideology == "Centre") or (uspd_relation < 25 and uspd_ideology == "Right")) : The USPD distrusts us too much. ?][? if ((rdp_relation >= 40 and rdp_ideology == "Left") or (rdp_relation >= 25 and rdp_ideology == "Right")) : The RDP distrusts us too much. ?]
+subtitle: <span style="color: #db7097;">**USPD**</span> + <span style="color: #c66cda;">**RDP**</span> + <span style="color: #d9c640;">**LVP**</span> + <span style="color: #000;">**Z**</span> + <span style="color: #69A2be;">**BVP**</span> ([+ grand_coalition +]%)
+unavailable_subtitle: <span style="color: #db7097;">**USPD**</span> + <span style="color: #c66cda;">**RDP**</span> + <span style="color: #d9c640;">**LVP**</span> + <span style="color: #000;">**Z**</span> + <span style="color: #69A2be;">**BVP**</span> ([+ grand_coalition +]%)- [? if ((uspd_relation < 45 and uspd_ideology == "Left") or (uspd_relation < 35 and uspd_ideology == "Centre") or (uspd_relation < 25 and uspd_ideology == "Right")) : The USPD distrusts us too much. ?][? if ((rdp_relation >= 40 and rdp_ideology == "Left") or (rdp_relation >= 25 and rdp_ideology == "Right")) : The RDP distrusts us too much. ?]
 on-arrival: in_grand_coalition = 1; in_popular_front = 0; in_left_front = 0; in_united_front = 0; in_centre_right_coalition = 0; foreign_minister_party = "RDP"; interior_minister_party = "USPD"; justice_minister_party = "LVP"; labor_minister_party = "USPD"; reichswehr_minister_party = "I"; economic_minister_party = "USPD"; finance_minister_party = "LVP"; agriculture_minister_party = "LVP";
 go-to: grand_coalition_menu
 
