@@ -115,14 +115,14 @@ Q.nsfb_relation = 0;
 Q.spd_leader = "Dittmann";
 Q.uspd_leader = "Wels";
 Q.rdp_leader = "Erkelenz";
-Q.lv_leader = "Kahl";
+Q.lvp_leader = "Kahl";
 Q.dnvp_leader = "Hergt";
 Q.nsfb_leader = "Graefe";
 
 Q.spd_ideology = "Right";
 Q.uspd_ideology = "Centre";
 Q.rdp_ideology = "Right";
-Q.lv_ideology = "Centre";
+Q.lvp_ideology = "Centre";
 Q.dnvp_ideology = "Left";
 Q.nsfb_ideology = "Pragmatic";
 
