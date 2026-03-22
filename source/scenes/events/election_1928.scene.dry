@@ -111,7 +111,7 @@ Q.right_coalition = parseFloat((Q.z_r + Q.other_r + Q.dnvp_r + Q.nsfb_r).toFixed
 Q.far_right_coalition = parseFloat((Q.dnvp_r + Q.nsfb_r).toFixed(1));
 Q.left_front = parseFloat((Q.spd_r + Q.uspd_r).toFixed(1));
 // i'm wirthing it. 
-Q.popular_front_coalition = parseFloat((Q.spd_r + Q.uspd_r + Q.rdp_r + Q.z_r - 3).toFixed(1));
+Q.popular_front_coalition = parseFloat((Q.spd_r + Q.uspd_r + Q.rdp_r + Q.z_r).toFixed(1));
 // canon ending???
 Q.united_front_coalition = parseFloat((Q.spd_r + Q.uspd_r + Q.rdp_r).toFixed(1));
 
@@ -126,6 +126,7 @@ Q.lvp_in_government = 0;
 Q.z_in_government = 0;
 Q.dnvp_in_government = 0;
 Q.nsfb_in_government = 0;
+Q.spd_toleration = 0;
 
 Q.in_weimar_coalition = 0;
 Q.in_grand_coalition = 0;
@@ -298,6 +299,7 @@ There are some potential coalition arrangements.
 
 - @grand_coalition
 - @weimar_coalition
+- @minority_weimar_coalition
 - @centre_right_coalition
 - @popular_front_coalition
 #- @spd_majority
@@ -463,7 +465,7 @@ subtitle: <span style="color: #d9c640;">**LVP**</span> + <span style="color: #00
 unavailable-subtitle: <span style="color: #d9c640;">**LVP**</span> + <span style="color: #000;">**Z**</span> + <span style="color: #69A2be;">**BVP**</span> + <span style="color: #909090;">**Others**</span> + <span style="color: #598dca;">**DNVP**</span> ([+ centre_right_coalition +]%) - [? if ((lvp_relation < 45 and lvp_ideology == "Left") or (lvp_relation < 35 and lvp_ideology == "Centre") or (lvp_relation < 25 and lvp_ideology == "Right")): We do not have good enough relations with the LVP. ?][? if ((dnvp_relation < 35 and dnvp_ideology == "Left") or (dnvp_relation < 45 and dnvp_ideology == "Centre") or (dnvp_relation < 60 and dnvp_ideology == "Right")): We do not have good enough relations with the DNVP. ?][? if ((left_strength*2 + center_strength >= clerical_strength + labour_strength) and dnvp_ideology == "Right"): The party has not debased itself enough to work with Hugenberg. ?][? if ((left_strength >= clerical_strength + labour_strength) and dnvp_ideology == "Centre"): The party is too left-wing for this. ?]
 view_if: centre_right_coalition >= 50
 choose-if: (((lvp_relation >= 45 and lvp_ideology == "Left") or (lvp_relation >= 35 and lvp_ideology == "Centre") or (lvp_relation >= 25 and lvp_ideology == "Right")) and ((dnvp_relation >= 35 and dnvp_ideology == "Left") or (dnvp_relation >= 45 and dnvp_ideology == "Centre" and (left_strength < clerical_strength + labour_strength)) or (dnvp_relation >= 60 and dnvp_ideology == "Right" and (left_strength*2 + center_strength < clerical_strength + labour_strength)))) 
-on-arrival: in_centre_right_coalition = 1; lvp_in_government = 1; z_in_government = 1; dnvp_in_government = 1; in_popular_front = 0; in_weimar_coalition = 0; in_left_front = 0; in_united_front = 0; in_grand_coalition = 0; foreign_minister_party = "LVP"; interior_minister_party = "DNVP"; justice_minister_party = "LVP"; labor_minister_party = "LVP"; reichswehr_minister_party = "I"; economic_minister_party = "LVP"; finance_minister_party = "DNVP"; agriculture_minister_party = "DNVP"; foreign_minister = "Curtius"; interior_minister = "von Keudell"; justice_minister = "Kahl"; labor_minister = "Thiel"; reichswehr_minister = "Reinhardt"; economic_minister = "von Raumer"; finance_minister = "von Schlieben"; agriculture_minister = "Schiele";
+on-arrival: in_centre_right_coalition = 1; lvp_in_government = 1; z_in_government = 1; dnvp_in_government = 1; in_popular_front = 0; in_weimar_coalition = 0; in_left_front = 0; in_united_front = 0; in_grand_coalition = 0; foreign_minister_party = "LVP"; interior_minister_party = "DNVP"; justice_minister_party = "LVP"; labor_minister_party = "LVP"; reichswehr_minister_party = "I"; economic_minister_party = "LVP"; finance_minister_party = "DNVP"; agriculture_minister_party = "DNVP"; foreign_minister = "Curtius"; interior_minister = "von Keudell"; justice_minister = "Kahl"; labor_minister = "Thiel"; reichswehr_minister = "Reinhardt"; economic_minister = "von Raumer"; finance_minister = "von Schlieben"; agriculture_minister = "Schiele"; spd_relation -= 7; uspd_relation -= 4; rdp_relation -= 4;
 
 There are enough votes for a centre-right coalition of the Center (+ BVP), LVP, DNVP, and minor conservative parties. 
 
@@ -485,9 +487,9 @@ title: Oskar Hergt for Chancellor
 subtitle: A man of the DNVP in the Reichskanzlei? 
 unavailable-subtitle: The DNVP is not strong enough to demand the chancellery.
 on-arrival: chancellor = "Hergt"; chancellor_party = "DNVP"; lvp_relation -= 5; rdp_relation -= 12; uspd_relation -= 12; spd_relation -= 12; spd_coalition -= 4; leverage += 5; 
-choose-if: dnvp_r >= (lvp_r + 2) and dnvp_r >= (z_r + 2)
+choose-if: dnvp_r >= (lvp_r + 1) and dnvp_r >= (z_r + 1)
 
-Oskar Hergt of the DNVP Has been appointed Chancellor - a firm nationalist and monarchist, despite his relatively moderate reputation. The left is furious.
+Oskar Hergt of the DNVP Has been appointed Chancellor - a firm nationalist and monarchist, despite his relatively moderate reputation. 
 
 - @ministries: We must select our ministries.
 
@@ -660,7 +662,7 @@ subtitle: USPD + RDP + Z + BVP ([+ weimar_coalition +]%)
 unavailable-subtitle: SPD + USPD + RDP + Z ([+ weimar_coalition +]%) - [? if ((uspd_relation < 50 and uspd_ideology == "Left") or (uspd_relation < 40 and uspd_ideology == "Centre") or (uspd_relation < 35 and uspd_ideology == "Right")): We do not have good enough relations with the USPD. ?][? if ((rdp_relation < 45 and rdp_ideology == "Left") or (rdp_relation < 35 and rdp_ideology == "Right")): We do not have good enough relations with the RDP. ?]
 view_if: weimar_coalition >= 50
 choose-if: ((uspd_relation >= 50 and uspd_ideology == "Left") or (uspd_relation >= 40 and uspd_ideology == "Centre") or (uspd_relation >= 35 and uspd_ideology == "Right")) and ((rdp_relation >= 45 and rdp_ideology == "Left") or (rdp_relation >= 35 and rdp_ideology == "Right")) and left_front < 50 
-on-arrival: in_weimar_coalition = 1; uspd_in_government = 1; rdp_in_government = 1; z_in_government = 1; in_popular_front = 0; in_centre_right_coalition = 0; in_left_front = 0; foreign_minister_party = "RDP"; interior_minister_party = "USPD"; justice_minister_party = "USPD"; labor_minister_party = "USPD"; reichswehr_minister_party = "I"; economic_minister_party = "USPD"; finance_minister_party = "USPD"; agriculture_minister_party = "USPD"; foreign_minister = "Rathenau"; interior_minister = "Abegg"; justice_minister = "Radbruch"; labor_minister = "Wissell"; reichswehr_minister = "Reinhardt"; economic_minister = "Wirth"; finance_minister = "Erzberger"; agriculture_minister = "Schmidt";
+on-arrival: in_weimar_coalition = 1; uspd_in_government = 1; rdp_in_government = 1; z_in_government = 1; in_popular_front = 0; in_centre_right_coalition = 0; in_left_front = 0; foreign_minister_party = "RDP"; interior_minister_party = "USPD"; justice_minister_party = "RDP"; labor_minister_party = "USPD"; reichswehr_minister_party = "I"; economic_minister_party = "USPD"; finance_minister_party = "USPD"; agriculture_minister_party = "USPD"; foreign_minister = "Rathenau"; interior_minister = "Köster"; justice_minister = "Bernhard"; labor_minister = "Wissell"; reichswehr_minister = "Reinhardt"; economic_minister = "Schmidt"; finance_minister = "Landsberg"; agriculture_minister = "Schmidt";
 achievement: weimar_coalition
 
 We have enough votes to form a majority Weimar Coalition, consisting of us, the RDP, and the USPD.
@@ -691,12 +693,40 @@ Wilhelm Marx has been appointed chancellor.
 
 @wirth
 title: Joseph Wirth for Chancellor
-subtitle: Wirth is a left-leaning member of Zentrum, widely respected among the left.
+subtitle: Wirth is a left-leaning member of Zentrum, and a protege of Erzberger.
 on-arrival: chancellor = "Z"; uspd_relation += 5; spd_relation += 2; dnvp_relation -= 4;
 
 Joseph Wirth, a leader of our progressive wing, has been appointed chancellor. 
 
 - @ministries: We must select our ministries.
+
+
+@minority_weimar_coalition
+title: We can form a minority Weimar Coalition with <span style="color: #ac2639;">**SPD**</span> toleration.
+subtitle: <span style="color: #db7097;">**USPD**</span> + <span style="color: #c66cda;">**RDP**</span> + <span style="color: #000;">**Z**</span> + <span style="color: #69A2be;">**BVP**</span> ([+ weimar_coalition +]%)
+unavailable-subtitle: <span style="color: #db7097;">**USPD**</span> + <span style="color: #c66cda;">**RDP**</span> + <span style="color: #000;">**Z**</span> + <span style="color: #69A2be;">**BVP**</span> ([+ weimar_coalition +]%) - [? if ((uspd_relation < 50 and uspd_ideology == "Left") or (uspd_relation < 40 and uspd_ideology == "Centre") or (uspd_relation < 35 and uspd_ideology == "Right")): We do not have good enough relations with the <span style="color: #db7097;">**USPD**</span>. ?][? if ((rdp_relation < 35 and rdp_ideology == "Left") or (rdp_relation < 45 and rdp_ideology == "Right")): We do not have good enough relations with the <span style="color: #c66cda;">**RDP**</span>. ?][? if (spd_relation < 45 and spd_ideology == "Right"): We do not have good enough relations with the <span style="color: #ac2639;">**SPD**</span>. ?]
+view_if: popular_front_coalition >= 50 and weimar_coalition < 50
+choose-if: ((uspd_relation >= 50 and uspd_ideology == "Left") or (uspd_relation >= 40 and uspd_ideology == "Centre") or (uspd_relation >= 35 and uspd_ideology == "Right")) and ((rdp_relation >= 35 and rdp_ideology == "Left") or (rdp_relation >= 45 and rdp_ideology == "Right")) and left_front < 50 and (spd_relation >= 45 and spd_ideology == "Right")
+on-arrival: in_weimar_coalition = 1; uspd_in_government = 1; rdp_in_government = 1; z_in_government = 1; spd_toleration = 1; in_popular_front = 0; in_centre_right_coalition = 0; in_left_front = 0; foreign_minister_party = "RDP"; interior_minister_party = "USPD"; justice_minister_party = "RDP"; labor_minister_party = "USPD"; reichswehr_minister_party = "I"; economic_minister_party = "USPD"; finance_minister_party = "USPD"; agriculture_minister_party = "USPD"; foreign_minister = "Rathenau"; interior_minister = "Köster"; justice_minister = "Bernhard"; labor_minister = "Wissell"; reichswehr_minister = "Reinhardt"; economic_minister = "Schmidt"; finance_minister = "Landsberg"; agriculture_minister = "Schmidt"; uspd_relation += 3; spd_relation += 3; rdp_relation += 2; 
+achievement: weimar_coalition
+
+We have enough votes to form a minority Weimar Coalition with <span style="color: #ac2639;">**SPD**</span> toleration, consisting of <span style="color: #000;">**us**</span>, the <span style="color: #c66cda;">**RDP**</span>, and the <span style="color: #db7097;">**USPD**</span>.
+
+Who should be the chancellor?
+
+- @muller
+- @erkelenz
+- @wirth
+
+@erkelenz
+title: Anton Erkelenz for Chancellor
+subtitle: Anton Erkelenz is the leader of the Free National Labour Congress and the <span style="color: #c66cda;">**RDP**</span>. 
+on-arrival: chancellor = "Erkelenz"; chancellor_party = "RDP"; uspd_relation += 3; rdp_relation += 7; leverage += 5; 
+
+Anton Erkelenz of the <span style="color: #c66cda;">**RDP**</span> has been appointed chancellor - for the first time, a <span style="color: #c66cda;">Radical</span> sits in the Reichskanzlei.
+
+- @ministries: We must select our ministries.
+
 
 @grand_coalition
 title: We can form a Grand Coalition.

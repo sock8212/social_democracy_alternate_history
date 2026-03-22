@@ -105,7 +105,7 @@ Q.moderate_plan_adopted = 0;
 
 // inter-party relations, top out of date
 
-Q.spd_relation = 32;
+Q.spd_relation = 37;
 Q.uspd_relation = 48;
 Q.rdp_relation = 38;
 Q.lvp_relation = 63;
@@ -365,6 +365,7 @@ Q.rdp_dissent = 2;
 Q.lvp_dissent = 1;
 Q.dnvp_dissent = 0;
 Q.nsfb_dissent = 0;
+Q.spd_inter_party_seen = 0;
 
 // Popular Front = SPD + USPD + RDP + Z
 Q.in_popular_front = 0;
