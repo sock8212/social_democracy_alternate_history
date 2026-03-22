@@ -1,8 +1,8 @@
 
 # faction strength
 
-(0..9) weak
-(9..15) moderate
-(15..25) strong
-(25..35) very strong
-(35..) dominant
+(0..15) weak
+(15..30) moderate
+(30..38) strong
+(38..45) very strong
+(45..) dominant

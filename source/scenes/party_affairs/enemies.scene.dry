@@ -1,4 +1,4 @@
-title: Choosing Our Enemies
+title: Choosing Our Path
 new-page: true
 view-if: year <= 1930 and enemies_timer <= 0
 on-arrival: month_actions += 1; enemies_timer = 18
@@ -9,15 +9,15 @@ tags: party_affairs
 
 = Choosing our enemies
 
-In our media and campaign materials, who should we consider as our main opponents?
+In our media and campaign materials, what should we emphasise?
 
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
-- @anti_dem: The anti-democratic parties of the far right and left - the KPD, NSDAP, and DNVP.
+- @constitution
+- @anti_dem: The radicals of the far right and left - the SPD, DNVP, and NSFB.
 - @far_right: The far right - the NSDAP and DNVP.
 - @nsdap: The NSDAP alone.
 - @kpd: The KPD.
-- @bourgeois: The bourgeois parties - the Center and DVP.
 - @easy_discard
 
 @anti_dem
@@ -44,3 +44,8 @@ Attacking the KPD is supported by all but the most left-wing socialists, and win
 on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; dvp_relation -= 5; z_relation -= 5; kpd_relation += 5; reformist_dissent += 8; workers_z -= 3; coalition_dissent += 1
 
 Our anti-bourgeois rhetoric is popular among the left, but may make it harder to build the coalitions that are necessary for government in the future.
+
+@constitution
+on-arrival: enemies = "bourgeois parties"; left_strength += 5; left_dissent -= 5; dnvp_relation -= 4; rdp_relation += 5; uspd_relation += 3; spd_relation += 1;
+
+Our emphasis on defending the (highly progressive) constitution earns us support among the left, but makes it harder to reach out to the DNVP.
