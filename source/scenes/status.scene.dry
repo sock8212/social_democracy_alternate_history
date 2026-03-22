@@ -92,7 +92,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 [? if uspd_ideology != 0: <span class="tooltip-text" title="Radical Democratic Party" style="color: #c66cda;">**RDP**</span>: [? if rdp_ideology = "Left": Radical Liberalism?][? if rdp_ideology = "Right": Progressive Liberalism ?] ([+ rdp_leader +])?]
 
-[? if uspd_ideology != 0: <span class="tooltip-text" title="United Liberal Party" style="color: #d9c640;">**LVP**</span>: [? if lv_ideology = "Left": Big-tent Liberalism?][? if lv_ideology = "Centre": Classical Liberalism ?][? if lv_ideology = "Right": National Liberalism ?] ([+ lv_leader +])?]
+[? if uspd_ideology != 0: <span class="tooltip-text" title="United Liberal Party" style="color: #d9c640;">**LVP**</span>: [? if lvp_ideology = "Left": Big-tent Liberalism?][? if lvp_ideology = "Centre": Classical Liberalism ?][? if lvp_ideology = "Right": National Liberalism ?] ([+ lvp_leader +])?]
 
 [? if uspd_ideology != 0: <span class="tooltip-text" title="German National People's Party" style="color: #598dca;">**DNVP**</span>: [? if dnvp_ideology = "Left": Popular Conservatism?][? if dnvp_ideology = "Centre": National Conservatism ?][? if dnvp_ideology = "Right": Authoritarian Conservatism ?] ([+ dnvp_leader +])?]
 
