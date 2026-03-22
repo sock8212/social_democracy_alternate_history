@@ -45,7 +45,7 @@ title: Building relations with the SPD.
 subtitle: Who knows where this will lead us?
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: spd_relation += 5;
+on-arrival: advisor_action_timer = 6; spd_relation += 5;
 
 The SPD has become somewhat less hostile and is pleased that we reached out to them.
 

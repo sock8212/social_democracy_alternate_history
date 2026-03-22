@@ -105,9 +105,9 @@ Q.moderate_plan_adopted = 0;
 
 // inter-party relations, top out of date
 
-Q.spd_relation = 36;
+Q.spd_relation = 33;
 Q.uspd_relation = 48;
-Q.rdp_relation = 40;
+Q.rdp_relation = 38;
 Q.lvp_relation = 63;
 Q.dnvp_relation = 39;
 Q.nsfb_relation = 0;
