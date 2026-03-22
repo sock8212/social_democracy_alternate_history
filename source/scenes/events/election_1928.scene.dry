@@ -483,10 +483,11 @@ Hans Luther, former president of the Reichsbank, has been appointed chancellor. 
 @hergt
 title: Oskar Hergt for Chancellor
 subtitle: A man of the DNVP in the Reichskanzlei? 
-on-arrival: chancellor = "Hergt"; chancellor_party = "DNVP"; lvp_relation -= 5; rdp_relation -= 12; uspd_relation -= 12; spd_relation -= 12; leverage += 5; 
-view_if: dnvp_r >= (lvp_r + 3) and dnvp_r >= (z_r + 3)
+unavailable-subtitle: The DNVP is not strong enough to demand the chancellery.
+on-arrival: chancellor = "Hergt"; chancellor_party = "DNVP"; lvp_relation -= 5; rdp_relation -= 12; uspd_relation -= 12; spd_relation -= 12; spd_coalition -= 4; leverage += 5; 
+choose-if: dnvp_r >= (lvp_r + 2) and dnvp_r >= (z_r + 2)
 
-Oskar Hergt of the DNVP Has been appointed Chancellor - Germany's first nationalist and monarchist. The left is furious.
+Oskar Hergt of the DNVP Has been appointed Chancellor - a firm nationalist and monarchist, despite his relatively moderate reputation. The left is furious.
 
 - @ministries: We must select our ministries.
 
