@@ -286,7 +286,7 @@ Left Front (<span style="color: #ac2639;">**SPD**</span> + <span style="color: #
 
 United Front (<span style="color: #ac2639;">**SPD**</span> + <span style="color: #db7097;">**USPD**</span> + <span style="color: #c66cda;">**RDP**</span>): [+ united_front_coalition +]%
 
-Centre-right Coalition (<span style="color: #d9c640;">**LVP**</span> + <span style="color: #000;">**Z**</span> + <span style="color: #69A2be;">**BVP**</span> + Others + <span style="color: #598dca;">**DNVP**</span>): [+ centre_right_coalition +]%
+Centre-right Coalition (<span style="color: #d9c640;">**LVP**</span> + <span style="color: #000;">**Z**</span> + <span style="color: #69A2be;">**BVP**</span> + <span style="color: #909090;">**Others**</span> + <span style="color: #598dca;">**DNVP**</span>): [+ centre_right_coalition +]%
 
 [? if nazi_urgency <= 1 and nsdap_r >= 15 : The rapid rise in NSDAP votes is extremely worrying. Many had believed that the party was moribund; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
