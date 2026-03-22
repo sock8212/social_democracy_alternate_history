@@ -106,7 +106,7 @@ if (Q.z_r >= Q.spd_r && Q.z_r >= Q.uspd_r && Q.z_r >= Q.dnvp_r) {
 Q.weimar_coalition = parseFloat((Q.uspd_r + Q.rdp_r + Q.z_r).toFixed(1));
 Q.grand_coalition = parseFloat((Q.uspd_r + Q.rdp_r + Q.z_r + Q.lvp_r).toFixed(1));
 Q.bourgeois_coalition = parseFloat((Q.rdp_r + Q.z_r + Q.lvp_r + Q.other_r).toFixed(1));
-Q.center_right_coalition = parseFloat((Q.z_r + Q.lvp_r + Q.other_r + Q.dnvp_r).toFixed(1));
+Q.centre_right_coalition = parseFloat((Q.z_r + Q.lvp_r + Q.other_r + Q.dnvp_r).toFixed(1));
 Q.right_coalition = parseFloat((Q.z_r + Q.other_r + Q.dnvp_r + Q.nsfb_r).toFixed(1));
 Q.far_right_coalition = parseFloat((Q.dnvp_r + Q.nsfb_r).toFixed(1));
 Q.left_front = parseFloat((Q.spd_r + Q.uspd_r).toFixed(1));
@@ -278,15 +278,17 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-Weimar Coalition (USPD + RDP + Z + BVP): [+ weimar_coalition +]%
+Weimar Coalition (<span style="color: #db7097;">**USPD**</span> + <span style="color: #c66cda;">**RDP**</span> + <span style="color: #000;">**Z**</span> + <span style="color: #69A2be;">**BVP**</span>
+): [+ weimar_coalition +]%
 
-Grand Coalition (USPD + RDP + LVP + Z + BVP): [+ grand_coalition +]%
+Grand Coalition (<span style="color: #db7097;">**USPD**</span> + <span style="color: #c66cda;">**RDP**</span> + <span style="color: #d9c640;">**LVP**</span> + <span style="color: #000;">**Z**</span> + <span style="color: #69A2be;">**BVP**</span>
+): [+ grand_coalition +]%
 
-Left Front (SPD + USPD): [+ left_front +]%
+Left Front (<span style="color: #ac2639;">**SPD**</span> + <span style="color: #db7097;">**USPD**</span>): [+ left_front +]%
 
-United Front (SPD + USPD + RDP): [+ united_front_coalition +]%
+United Front (<span style="color: #ac2639;">**SPD**</span> + <span style="color: #db7097;">**USPD**</span> + <span style="color: #c66cda;">**RDP**</span>): [+ united_front_coalition +]%
 
-Centre-right Coalition (LVP + Z + BVP + DVP + Others + DNVP): [+ center_right_coalition +]%
+Centre-right Coalition (<span style="color: #d9c640;">**LVP**</span> + <span style="color: #000;">**Z**</span> + <span style="color: #69A2be;">**BVP**</span> + Others + <span style="color: #598dca;">**DNVP**</span>): [+ centre_right_coalition +]%
 
 [? if nazi_urgency <= 1 and nsdap_r >= 15 : The rapid rise in NSDAP votes is extremely worrying. Many had believed that the party was moribund; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
@@ -457,37 +459,38 @@ In response to the KPD's entrance into the government, the right-wing immediatel
 
 
 
-@right_coalition
-title: Refuse to form a government, so that a right-wing coalition may be formed.
-subtitle: Z + BVP + DVP + DNVP + Others ([+ right_coalition +]%)
-unavailable-subtitle: The DNVP is not interested in a coalition with the Center.
-view-if: right_coalition >= 50
-choose-if: year < 1929
+@centre_right_coalition
+title: We can form a Centre-right Coalition.
+subtitle: LVP + Z + BVP + Others + DNVP ([+ centre_right_coalition +]%)
+unavailable-subtitle: LVP + Z + BVP + Others + DNVP ([+ centre_right_coalition +]%) - [? if ((lvp_relation < 45 and lvp_ideology == "Left") or (lvp_relation < 35 and lvp_ideology == "Centre") or (lvp_relation < 25 and lvp_ideology == "Right")): We do not have good enough relations with the LVP. ?][? if ((dnvp_relation < 35 and dnvp_ideology == "Left") or (dnvp_relation < 45 and dnvp_ideology == "Centre") or (dnvp_relation < 60 and dnvp_ideology == "Right")): We do not have good enough relations with the DNVP. ?][? if (left_strength*2 + center_strength >= clerical_strength + labour_strength): The party has not debased itself enough to work with Hugenberg. ?]
+view_if: centre_right_coalition >= 50
+choose-if: ((lvp_relation >= 45 and lvp_ideology == "Left") or (lvp_relation >= 35 and lvp_ideology == "Centre") or (lvp_relation >= 25 and lvp_ideology == "Right")) and ((dnvp_relation >= 35 and dnvp_ideology == "Left") or (dnvp_relation >= 45 and dnvp_ideology == "Centre") or(dnvp_relation >= 60 and dnvp_ideology == "Right" and left_strength*2 + center_strength < clerical_strength + labour_strength)) 
+on-arrival: in_centre_right_coalition = 1; lvp_in_government = 1; z_in_government = 1; dnvp_in_government = 1; in_popular_front = 0; in_centre_right_coalition = 0; in_left_front = 0; foreign_minister_party = "LVP"; interior_minister_party = "DNVP"; justice_minister_party = "LVP"; labor_minister_party = "LVP"; reichswehr_minister_party = "I"; economic_minister_party = "LVP"; finance_minister_party = "DNVP"; agriculture_minister_party = "DNVP"; foreign_minister = "Curtius"; interior_minister = "vom Keudell"; justice_minister = "Kahl"; labor_minister = "Thiel"; reichswehr_minister = "Reinhardt"; economic_minister = "von Raumer"; finance_minister = "von Schlieben"; agriculture_minister = "Schiele";
 
-There are enough votes for a right-wing coalition of the Center (+ BVP), DVP, DNVP, and minor conservative parties. [? if largest_party == "SPD": However, this will be seen as abdicating responsibility for government, as we are the largest party. ?]
+There are enough votes for a centre-right coalition of the Center (+ BVP), LVP, DNVP, and minor conservative parties. 
 
-- @right_coalition_sure: Yes, we will abdicate our responsibility for government formation, and let a right-wing coalition take power.
-- @grand_coalition: Actually, we wish to form a grand coalition after all.
+- @marx
+- @luther
+- @hergt
 
-@no_right_coalition
-go-to: no_majority
+@luther
+title: Hans Luther for Chancellor
+subtitle: Hans Luther is a LVP-aligned independent. Perhaps granting them the chancellery may increase our leverage?
+on-arrival: chancellor = "Luther"; chancellor_party = "Independent"; lvp_relation += 5; leverage += 5; 
 
-However, the DNVP and its leader Hugenberg is refusing to partake in a coalition with the "November criminals" in the Center Party. Thus, there is no clear path towards a Reichstag majority.
+Hans Luther, former president of the Reichsbank, has been appointed chancellor. The LVP is pleased that someone aligned to them has been granted the chancellery.
 
-@right_coalition_sure
-subtitle: This will be extremely unpopular within our party.
-on-arrival: pro_republic -= 5; center_dissent += 15; left_dissent += 10; labor_dissent += 25; reformist_dissent += 25; neorevisionist_dissent += 15; z_relation -= 5; ddp_relation -= 5; dvp_relation -= 5
-go-to: right_coalition_2
+- @ministries: We must select our ministries.
 
+@hergt
+title: Oskar Hergt for Chancellor
+subtitle: A man of the DNVP in the Reichskanzlei? 
+on-arrival: chancellor = "Hergt"; chancellor_party = "DNVP"; lvp_relation -= 5; rdp_relation -= 12; uspd_relation -= 12; spd_relation -= 12; leverage += 5; 
+view_if: dnvp_r >= (lvp_r + 3) and dnvp_r >= (z_r + 3)
 
-@right_coalition_2
-unavailable-subtitle: The DNVP is not interested in a coalition with the Center.
-view-if: right_coalition >= 50
-choose-if: year < 1929
-on-arrival: spd_in_government = 0; spd_toleration = 0; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "DVP"; interior_minister_party = "DNVP"; justice_minister_party = "DNVP"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "DVP"; finance_minister_party = "Z"; agriculture_minister_party = "DNVP"; in_right_coalition = 1;
+Oskar Hergt of the DNVP Has been appointed Chancellor - Germany's first nationalist and monarchist. The left is furious.
 
-Even though the DNVP is very reluctant to participate in such a coalition, they still accede to President Hindenburg's wishes. Thus, a majority center-right coalition is formed, with Brüning as chancellor.
-
+- @ministries: We must select our ministries.
 
 
 @no_majority
@@ -896,17 +899,17 @@ tags: mins_1928
 
 Andreas Hermes has been appointed Agriculture Minister.
 
-@reichswehr
-title: Reichswehr Ministry
-subtitle: The Reichswehr ministry controls the armed forces.
-unavailable-subtitle: We do not have enough leverage.
-tags: mins_1928
-choose-if: leverage >= 20 
-view-if: reichswehr_minister_party != "Z"
-on-arrival: leverage -= 20; reichswehr_minister_party = "Z"; reichswehr_minister = "Leber"
-go-to: ministries
+#@reichswehr
+#title: Reichswehr Ministry
+#subtitle: The Reichswehr ministry controls the armed forces.
+#unavailable-subtitle: We do not have enough leverage.
+#tags: mins_1928
+#choose-if: leverage >= 20 
+#view-if: reichswehr_minister_party != "Z"
+#on-arrival: leverage -= 20; reichswehr_minister_party = "Z"; reichswehr_minister = "Leber"
+#go-to: ministries
 
-Julius Leber of the SPD has been appointed Reichswehr Minister.
+#Julius Leber of the SPD has been appointed Reichswehr Minister.
 
 
 
@@ -934,7 +937,7 @@ go-to: ministries
 @drop_finance
 title: Drop the Finance Ministry.
 view-if: finance_minister_party = "Z"
-on-arrival: finance_minister_party = "LVP"; finance_minister = "Moldenhauer"; leverage += 10; finance_minister_party = "Z" if in_weimar_coalition or in_popular_front; finance_minister = "Erzberger" if in_weimar_coalition or in_popular_front
+on-arrival: finance_minister_party = "LVP"; finance_minister = "Moldenhauer"; leverage += 10; finance_minister_party = "SVD" if in_weimar_coalition or in_popular_front; finance_minister = "Erzberger" if in_weimar_coalition or in_popular_front
 tags: drop_mins_1928
 go-to: ministries
 
@@ -966,9 +969,9 @@ on-arrival: agriculture_minister_party = ddp_name; agriculture_minister = "Dietr
 tags: drop_mins_1928
 go-to: ministries
 
-@drop_reichswehr
-title: Drop the Reichswehr Ministry.
-view-if: reichswehr_minister_party = "SPD"
-on-arrival: reichswehr_minister_party = "I"; reichswehr_minister = "Groener"; leverage += 15;
-tags: drop_mins_1928
-go-to: ministries
+#@drop_reichswehr
+#title: Drop the Reichswehr Ministry.
+#view-if: reichswehr_minister_party = "SPD"
+#on-arrival: reichswehr_minister_party = "I"; reichswehr_minister = "Groener"; leverage += 15;
+#tags: drop_mins_1928
+#go-to: ministries
