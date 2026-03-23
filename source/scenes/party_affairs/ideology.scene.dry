@@ -14,22 +14,22 @@ The SPD is torn between many different ideological currents. What should be our 
 
 [? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
 
-- @class_struggle: Class struggle and preparing the proletariat for the revolution are our primary goals.
+- @left: Class struggle and preparing the proletariat for the revolution are our primary goals.
 - @centrist: The Center Marxism of Karl Kautsky remains the best way to resolve our internal contradictions.
 - @labor: We should work with the trade unions to improve the lives of workers.
 - @reform: Following Eduard Bernstein, we should work for ethical socialism, strengthen democracy, and expand the party's electorate.
 - @easy_discard
 
-@class_struggle
+@left
 on-arrival: {!
 if (Q.ideology && Q.ideology != "left") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "left"; left_strength += 10; communist_coalition += 1; left_dissent -= 5; z_relation -= 3; dvp_relation -= 5; nationalization_support += 1; kpd_relation += 3
+on-departure: ideology = "left"; left_strength += 10; spd_coalition += 1 if changed < 1; left_dissent -= 5; lvp_relation -= 2; dnvp_relation -= 5; nationalization_support += 1; spd_relation += 3; rdp_relation += 5; uspd_relation += 5
 
-The radical left of the party supports a course of class struggle, and potentially a reconcilliation with the Communists.
+The left are staunch republicans and favour co-operation with the other democratic parties.
 
 @centrist
 on-arrival: {!
