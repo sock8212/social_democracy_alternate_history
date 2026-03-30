@@ -187,7 +187,7 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 Support for the Republic: [+ pro_republic_disp +]%
 Support for <span class="tooltip-text" title="The German Republic was founded by the socialist parties and to this day, they remain the strongest force in the liberal democracy that they established." style="color: #ba3737;">**Socialism**</span>: [+ socialism_disp +]%
-Support for <span class="tooltip-text" title="Nationalism, although weakened by the Silent Dictatorship's bloody collapse and the Zimmerwaldian peace that followed, remains a potent force in the Republic." style="color: #3a66b3;">**Nationalism**</span>: [+ nationalism_disp +]%
+Support for <span class="tooltip-text" title="Nationalism, although weakened by the Silent Dictatorship's bloody collapse and the Zimmerwaldian peace that followed, remains the key force driving the Right." style="color: #3a66b3;">**Nationalism**</span>: [+ nationalism_disp +]%
 
 **Detailed results for each demographic**
 
